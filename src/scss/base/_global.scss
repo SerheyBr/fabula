@@ -1,0 +1,18 @@
+.container {
+   position: relative;
+   max-width: 1580px;
+   margin: 0 auto;
+   padding: 0 30px;
+}
+
+body {
+   overflow-x: hidden;
+   background-color: #16042a;
+   font-family: var(--font-family);
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 160%;
+   color: var(--white);
+   display: flex;
+   flex-direction: column;
+}

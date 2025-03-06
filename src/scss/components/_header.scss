@@ -1,3 +1,46 @@
 .header {
-   background-color: bisque;
+   &__wrapper {
+      // margin-bottom: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px 90px 50px 0;
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 24px;
+      text-align: center;
+      nav {
+         display: flex;
+         gap: 40px;
+      }
+   }
+
+   &__mail {
+      color: var(--white);
+   }
+
+   &__phone {
+      color: var(--violet);
+   }
+   &__logo {
+   }
+   @media (max-width: 1520px) {
+      &__wrapper {
+         padding: 50px 0 50px 0;
+      }
+   }
+   @media (max-width: 700px) {
+      &__mail {
+         display: none;
+      }
+   }
+   @media (max-width: 450px) {
+      &__wrapper {
+         font-size: 20px;
+         align-items: self-start;
+      }
+      &__logo {
+         max-width: 85px;
+      }
+   }
 }

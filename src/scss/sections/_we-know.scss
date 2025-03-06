@@ -1,0 +1,58 @@
+.we-know {
+   &__wrapper {
+      display: flex;
+      justify-content: center;
+   }
+
+   &__img {
+      position: relative;
+      max-width: 358px;
+      width: 100%;
+      height: 460px;
+      mix-blend-mode: color-dodge;
+
+      background-image: url('../assets/img/brain.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+
+   &__title {
+      display: block;
+
+      position: absolute;
+      top: 50%;
+      left: -50%;
+      font-family: var(--font3);
+      font-weight: 400;
+      font-size: 64px;
+      line-height: 127%;
+
+      color: var(--white);
+      text-align: center;
+      span {
+         font-family: var(--font3);
+         font-weight: 600;
+         font-size: 64px;
+         line-height: 127%;
+         text-align: center;
+         background: linear-gradient(
+            90deg,
+            #8a31ef 0%,
+            #d0b4f0 69%,
+            #8a31ef 100%
+         );
+         background-clip: text;
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         white-space: nowrap;
+      }
+   }
+
+   &__list {
+      display: none;
+   }
+
+   &__list-item {
+   }
+}

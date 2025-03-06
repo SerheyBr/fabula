@@ -1,9 +1,17 @@
-@use '_fonts';
-@use '_settings';
-@use '_variables';
-@use 'global';
+@use 'base/fonts';
+@use 'base/settings';
+@use 'base/variables';
+@use 'base/global';
 
 //компоненты
 @use 'components/header';
-
+@use 'components/title-gradient';
+@use 'components/title-mixcollor';
+@use 'components/button-green';
+@use 'components/tag';
 @use 'components/footer';
+
+//секции
+@use 'sections/hero';
+@use 'sections/ribbons';
+@use 'sections/we-know';

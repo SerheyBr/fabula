@@ -1,3 +1,38 @@
 .footer {
-   background-color: bisque;
+   display: none;
+   margin-top: auto;
+   &__wrapper {
+      position: relative;
+   }
+
+   &__bg {
+      position: absolute;
+      bottom: -24px;
+      left: 0;
+      z-index: -1;
+   }
+
+   &__list {
+      display: flex;
+      justify-content: center;
+      gap: 94px;
+      font-weight: 300;
+      font-size: 40px;
+      line-height: 140%;
+      // color: var(--black);
+      color: red;
+   }
+
+   &__copy {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 75px;
+      background-color: #f5ebfe;
+
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 140%;
+      color: var(--black-text);
+   }
 }

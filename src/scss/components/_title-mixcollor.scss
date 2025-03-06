@@ -1,0 +1,13 @@
+.title-mixcolor {
+   font-family: var(--font3);
+   font-weight: 600;
+   font-size: 50px;
+   line-height: 110%;
+   color: var(--white);
+   span {
+      background: linear-gradient(90deg, #8a31ef 0%, #d0b4f0 69%, #8a31ef 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+   }
+}
