@@ -180,7 +180,7 @@ body {
 }
 
 .title-gradient {
-  font-family: var(--font3);
+  font-family: var(--font3-2);
   font-weight: 600;
   font-size: 64px;
   line-height: 127%;
@@ -1109,5 +1109,194 @@ body {
     font-size: 19px;
     left: 68%;
   }
+}
+
+.now-imagine {
+  position: relative;
+  width: 100%;
+  min-height: 300vh;
+  overflow-x: hidden;
+}
+.now-imagine__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.now-imagine__wrapper {
+  width: 100%;
+  height: 200vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.now-imagine__body {
+  text-align: center;
+  max-width: 1260px;
+}
+.now-imagine__title {
+  margin-bottom: 16px;
+}
+.now-imagine__text {
+  font-family: var(--second-family);
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 130%;
+  text-align: center;
+  color: var(--white);
+}
+
+.now-imagine-cloud {
+  position: absolute;
+}
+.now-imagine-cloud img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.now-imagine-cloud__1--small-topcenter {
+  max-width: 9%;
+  top: 17%;
+  left: 49%;
+}
+.now-imagine-cloud__1--big-bottomleft {
+  max-width: 36%;
+  top: 37%;
+  left: -14%;
+}
+.now-imagine-cloud__1--big-bottomright {
+  max-width: 35%;
+  right: -12%;
+  top: 40%;
+}
+.now-imagine-cloud__2--small-topleft {
+  max-width: 22%;
+  top: 17%;
+  left: 8%;
+}
+.now-imagine-cloud__2--big-topleft {
+  width: 35%;
+  top: 18%;
+  left: -10%;
+}
+.now-imagine-cloud__2--big-topright-revers {
+  width: 26%;
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+  right: 6%;
+  top: 14%;
+}
+.now-imagine-cloud__2--big-topright {
+  width: 41%;
+  right: -17%;
+  top: 11%;
+}
+.now-imagine-cloud__2--small-bottomleft {
+  width: 17%;
+  top: 46%;
+  left: 13%;
+  z-index: -2;
+}
+.now-imagine-cloud__2--small-center {
+  width: 10%;
+  top: 45%;
+  left: 35%;
+}
+.now-imagine-cloud__2--small-bottomright {
+  width: 17%;
+  right: 14%;
+  top: 42%;
+  z-index: -2;
+}
+
+.nom-imagine-star {
+  position: absolute;
+  width: 78px;
+  height: 78px;
+  top: 0;
+  left: 0;
+}
+.nom-imagine-star__1 {
+  top: 15%;
+  left: 34%;
+}
+.nom-imagine-star__2 {
+  top: 20%;
+  left: 41%;
+}
+.nom-imagine-star__3 {
+  top: 21%;
+  left: 62%;
+}
+.nom-imagine-star__4 {
+  top: 30%;
+  left: 91%;
+}
+.nom-imagine-star__5 {
+  top: 41%;
+  left: 78%;
+}
+.nom-imagine-star__6 {
+  top: 42%;
+  left: 54%;
+}
+.nom-imagine-star__7 {
+  top: 40%;
+  left: 36%;
+}
+.nom-imagine-star__8 {
+  top: 43%;
+  left: 22%;
+}
+.nom-imagine-star__9 {
+  top: 47%;
+  left: 47%;
+}
+.nom-imagine-star__10 {
+  top: 49%;
+  left: 65%;
+}
+
+.nom-imagine-moon {
+  position: absolute;
+  width: 9%;
+  top: 11%;
+  left: 45%;
+}
+.nom-imagine-moon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.now-imagine-blob {
+  position: absolute;
+  bottom: 38%;
+  left: 22%;
+  z-index: -3;
+}
+.now-imagine-blob__rope {
+  position: relative;
+}
+.now-imagine-blob__blob-on {
+  position: absolute;
+  top: 95%;
+  left: 17%;
+}
+.now-imagine-blob__blob-off {
+  position: absolute;
+  top: 95%;
+  left: 37%;
 }
 /*# sourceMappingURL=style.css.map */

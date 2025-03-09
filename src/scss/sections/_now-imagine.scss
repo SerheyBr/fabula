@@ -1,0 +1,204 @@
+.now-imagine {
+   position: relative;
+   width: 100%;
+   min-height: 300vh;
+
+   overflow-x: hidden;
+   &__bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+   }
+
+   &__wrapper {
+      width: 100%;
+      height: 200vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   &__body {
+      text-align: center;
+      max-width: 1260px;
+   }
+   &__title {
+      margin-bottom: 16px;
+   }
+
+   &__text {
+      font-family: var(--second-family);
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 130%;
+      text-align: center;
+      color: var(--white);
+   }
+}
+
+.now-imagine-cloud {
+   // background-color: rgb(155, 255, 127);
+   position: absolute;
+   img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+   &__1--small-topcenter {
+      max-width: 9%;
+      top: 17%;
+      left: 49%;
+   }
+
+   &__1--big-bottomleft {
+      max-width: 36%;
+      top: 37%;
+      left: -14%;
+   }
+
+   &__1--big-bottomright {
+      max-width: 35%;
+      right: -12%;
+      top: 40%;
+   }
+
+   &__2--small-topleft {
+      max-width: 22%;
+      top: 17%;
+      left: 8%;
+   }
+
+   &__2--big-topleft {
+      width: 35%;
+      top: 18%;
+      left: -10%;
+   }
+
+   &__2--big-topright-revers {
+      width: 26%;
+      transform: scaleX(-1);
+      right: 6%;
+      top: 14%;
+   }
+
+   &__2--big-topright {
+      width: 41%;
+      right: -17%;
+      top: 11%;
+   }
+
+   &__2--small-bottomleft {
+      width: 17%;
+      top: 46%;
+      left: 13%;
+      z-index: -2;
+   }
+
+   &__2--small-center {
+      width: 10%;
+      top: 45%;
+      left: 35%;
+   }
+
+   &__2--small-bottomright {
+      width: 17%;
+      right: 14%;
+      top: 42%;
+      z-index: -2;
+   }
+}
+
+.nom-imagine-star {
+   position: absolute;
+   width: 78px;
+   height: 78px;
+   top: 0;
+   left: 0;
+   img {
+   }
+   &__1 {
+      top: 15%;
+      left: 34%;
+   }
+
+   &__2 {
+      top: 20%;
+      left: 41%;
+   }
+
+   &__3 {
+      top: 21%;
+      left: 62%;
+   }
+
+   &__4 {
+      top: 30%;
+      left: 91%;
+   }
+
+   &__5 {
+      top: 41%;
+      left: 78%;
+   }
+
+   &__6 {
+      top: 42%;
+      left: 54%;
+   }
+
+   &__7 {
+      top: 40%;
+      left: 36%;
+   }
+
+   &__8 {
+      top: 43%;
+      left: 22%;
+   }
+
+   &__9 {
+      top: 47%;
+      left: 47%;
+   }
+
+   &__10 {
+      top: 49%;
+      left: 65%;
+   }
+}
+
+.nom-imagine-moon {
+   position: absolute;
+   width: 9%;
+   top: 11%;
+   left: 45%;
+   img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}
+
+.now-imagine-blob {
+   position: absolute;
+   bottom: 38%;
+   left: 22%;
+   z-index: -3;
+   &__rope {
+      position: relative;
+   }
+
+   &__blob-on {
+      position: absolute;
+      top: 95%;
+      left: 17%;
+   }
+
+   &__blob-off {
+      position: absolute;
+      top: 95%;
+      left: 37%;
+   }
+}
