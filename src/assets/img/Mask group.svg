@@ -1,0 +1,58 @@
+<svg width="1920" height="1161" viewBox="0 0 1920 1161" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.4">
+<mask id="mask0_2746_799" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-369" y="0" width="2658" height="1161">
+<line x1="956.969" y1="1.75193e-08" x2="956.969" y2="1161" stroke="white"/>
+<line x1="872.086" y1="1.75193e-08" x2="872.086" y2="1161" stroke="white"/>
+<line x1="787.195" y1="1.75193e-08" x2="787.195" y2="1161" stroke="white"/>
+<line x1="702.312" y1="1.75193e-08" x2="702.312" y2="1161" stroke="white"/>
+<line x1="617.422" y1="1.75193e-08" x2="617.422" y2="1161" stroke="white"/>
+<line x1="532.535" y1="1.75193e-08" x2="532.535" y2="1161" stroke="white"/>
+<line x1="1890.72" y1="1.75193e-08" x2="1890.72" y2="1161" stroke="white"/>
+<line x1="447.652" y1="1.75193e-08" x2="447.652" y2="1161" stroke="white"/>
+<line x1="1805.83" y1="1.75193e-08" x2="1805.83" y2="1161" stroke="white"/>
+<line x1="362.766" y1="1.75193e-08" x2="362.766" y2="1161" stroke="white"/>
+<line x1="1720.95" y1="1.75193e-08" x2="1720.95" y2="1161" stroke="white"/>
+<line x1="277.875" y1="1.75193e-08" x2="277.875" y2="1161" stroke="white"/>
+<line x1="1636.06" y1="1.75193e-08" x2="1636.06" y2="1161" stroke="white"/>
+<line x1="192.992" y1="1.75193e-08" x2="192.992" y2="1161" stroke="white"/>
+<line x1="1551.18" y1="1.75193e-08" x2="1551.18" y2="1161" stroke="white"/>
+<line x1="108.102" y1="1.75193e-08" x2="108.102" y2="1161" stroke="white"/>
+<line x1="1466.29" y1="1.75193e-08" x2="1466.29" y2="1161" stroke="white"/>
+<line x1="23.2188" y1="1.75193e-08" x2="23.2187" y2="1161" stroke="white"/>
+<line x1="1381.4" y1="1.75193e-08" x2="1381.4" y2="1161" stroke="white"/>
+<line x1="1296.52" y1="1.75193e-08" x2="1296.52" y2="1161" stroke="white"/>
+<line x1="1211.63" y1="1.75193e-08" x2="1211.63" y2="1161" stroke="white"/>
+<line x1="1126.74" y1="1.75193e-08" x2="1126.74" y2="1161" stroke="white"/>
+<line x1="1041.86" y1="1.75193e-08" x2="1041.86" y2="1161" stroke="white"/>
+<line x1="2288.11" y1="1078.38" x2="-368.127" y2="1078.38" stroke="white"/>
+<line x1="2288.11" y1="993.498" x2="-368.127" y2="993.498" stroke="white"/>
+<line x1="2288.11" y1="908.611" x2="-368.127" y2="908.611" stroke="white"/>
+<line x1="2288.11" y1="823.725" x2="-368.127" y2="823.724" stroke="white"/>
+<line x1="2288.11" y1="738.838" x2="-368.127" y2="738.838" stroke="white"/>
+<line x1="2288.11" y1="653.951" x2="-368.127" y2="653.951" stroke="white"/>
+<line x1="2288.11" y1="569.064" x2="-368.127" y2="569.064" stroke="white"/>
+<line x1="2288.11" y1="484.18" x2="-368.127" y2="484.18" stroke="white"/>
+<line x1="2288.11" y1="399.293" x2="-368.127" y2="399.293" stroke="white"/>
+<line x1="2288.11" y1="314.406" x2="-368.127" y2="314.406" stroke="white"/>
+<line x1="2288.11" y1="229.52" x2="-368.127" y2="229.519" stroke="white"/>
+<line x1="2288.11" y1="144.633" x2="-368.127" y2="144.633" stroke="white"/>
+<line x1="2288.11" y1="59.7461" x2="-368.127" y2="59.7459" stroke="white"/>
+</mask>
+<g mask="url(#mask0_2746_799)">
+<g filter="url(#filter0_f_2746_799)">
+<ellipse cx="960.007" cy="580.5" rx="1172.49" ry="477.045" fill="url(#paint0_radial_2746_799)"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_2746_799" x="-603.888" y="-287.945" width="3127.79" height="1736.89" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="195.7" result="effect1_foregroundBlur_2746_799"/>
+</filter>
+<radialGradient id="paint0_radial_2746_799" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(960.007 580.5) rotate(90) scale(477.045 1172.49)">
+<stop stop-color="#D9D9D9" stop-opacity="0.4"/>
+<stop offset="1" stop-color="#D9D9D9" stop-opacity="0.13"/>
+</radialGradient>
+</defs>
+</svg>
