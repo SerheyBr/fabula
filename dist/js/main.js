@@ -1,4 +1,4 @@
-
+// alert(window.innerHeight + 'px')
 
 //проверка работы слайдера
 const swiper = new Swiper('.mySlider', {

@@ -1,0 +1,25 @@
+.solution {
+   &__wrapper {
+   }
+
+   &__body {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   &__title {
+      margin-bottom: 16px;
+   }
+
+   &__text {
+      max-width: 1230px;
+      font-family: var(--second-family);
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 130%;
+      text-align: center;
+      color: var(--white);
+   }
+}

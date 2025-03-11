@@ -1,14 +1,21 @@
 .hero {
    position: relative;
    margin-bottom: 23px;
+
+   min-height: calc(100vh - 145px);
+
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+
    &__bg {
       position: absolute;
       width: 100vw;
       height: 100vh;
-      margin-top: -145px;
+
       overflow-x: hidden;
       z-index: -1;
-      // background-color: #c6f806;
+      // background-color: #f88b06;
    }
 
    &__bg-decor {
@@ -58,6 +65,9 @@
    }
 
    &__wrapper {
+      // background-color: #c6f806;
+      // position: absolute;
+      // top: 50%;
       display: flex;
       justify-content: space-between;
    }
@@ -357,7 +367,7 @@
    // left: 50%;
    // transform: translateX(-50%);
    margin: 0 auto;
-   margin-top: -18px;
+   // margin-top: -18px;
 
    display: flex;
    justify-content: center;
