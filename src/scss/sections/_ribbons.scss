@@ -14,7 +14,6 @@
       width: 200%;
       display: flex;
       justify-content: center;
-      // transform: scaleX(-50%);
    }
 
    &__element--bg-color {
@@ -30,14 +29,14 @@
    &__list {
       display: flex;
       white-space: nowrap;
-      gap: 70px;
+      gap: clamp(30px, 3.6458vw, 70px);
    }
 
    &__word {
       position: relative;
       font-family: var(--second-family);
       font-weight: 400;
-      font-size: 25px;
+      font-size: clamp(0.8125rem, 1.3021vw, 1.5625rem);
       color: var(--white);
       &::after {
          content: '';
@@ -51,25 +50,20 @@
          border-radius: 50%;
       }
    }
+   @media (max-width: 1500px) {
+      &__word {
+         &::after {
+            left: -30px;
+         }
+      }
+   }
    @media (max-width: 1024px) {
       &__element {
          padding: 15px 0;
       }
-      &__list {
-         gap: 30px;
-      }
       &__word {
-         font-size: 13px;
          &::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
             left: -20px;
-            width: 10px;
-            height: 10px;
-            background-color: white;
-            border-radius: 50%;
          }
       }
    }
