@@ -1,7 +1,7 @@
 .title-gradient {
    font-family: var(--font3-2);
    font-weight: 600;
-   font-size: 64px;
+   font-size: clamp(1.875rem, 6.25vw, 4rem);
    line-height: 127%;
    background: linear-gradient(90deg, #8a31ef 0%, #d0b4f0 69%, #8a31ef 100%);
    // background: linear-gradient(90deg, #de31ef 0%, #d0b4f0 69%, #de31ef 100%);

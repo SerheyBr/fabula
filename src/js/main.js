@@ -1,6 +1,6 @@
 // alert(window.innerHeight + 'px')
 
-const baseWidth = 1024
+const baseWidth = 1920
 const baseFontSize = 16
 
 const calculationVw = (px) => {
@@ -22,21 +22,10 @@ const clampSizesBlock = (min, max, text = '') => {
    console.log(res, text)
 }
 
-// console.log(calculationVw(-40))
-// clampFonts(13, 25)
-// clampSizesBlock(24, 34, 'width')
-// clampSizesBlock(61, 82, 'height')
-clampFonts(15, 31, '1')
-clampFonts(17, 33, '2')
-clampFonts(9, 18, '3')
-clampFonts(14, 27, '4')
-clampFonts(12, 24, '5')
-clampFonts(20, 40, '6')
-clampFonts(15, 31, '7')
-clampFonts(12, 24, '8')
-clampFonts(14, 28, '9')
-clampFonts(12, 24, '10')
-clampFonts(12, 24, '11')
-clampFonts(14, 27, '12')
-clampFonts(12, 24, '13')
-clampFonts(15, 33, '14')
+// console.log(calculationVw(202))
+// console.log(calculationVw(166))
+
+// clampSizesBlock(19, 82)
+// clampSizesBlock(122, 220)
+// clampSizesBlock(138, 77)
+clampFonts(21, 32)

@@ -1,6 +1,15 @@
 .solution {
-   margin-bottom: 215px;
+   // margin-bottom: 215px;
+   // display: none;
+   // min-height: 100vh;
+
    &__wrapper {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255, 0, 0, 0.248);
    }
 
    &__body {
@@ -18,7 +27,7 @@
       max-width: 1230px;
       font-family: var(--second-family);
       font-weight: 600;
-      font-size: 40px;
+      font-size: clamp(1.25rem, 3.9063vw, 2.5rem);
       line-height: 130%;
       text-align: center;
       color: var(--white);

@@ -1,27 +1,47 @@
 .now-imagine {
    position: relative;
    width: 100%;
-   // min-height: 300vh;
-   // background-color: rgba(255, 228, 196, 0.379);
-   // overflow-x: hidden;
    margin-bottom: 80px;
    &__bg {
-      min-height: 300vh;
+      min-height: 250vh;
       position: absolute;
-      // background-color: rgba(255, 196, 196, 0.379);
       width: 100vw;
       overflow-x: hidden;
       top: 0;
       left: 0;
       z-index: -1;
    }
-
+   &__bg-clouds {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100vh;
+   }
+   &__bg-stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      min-width: 100%;
+      min-height: 100vh;
+   }
+   &__bg-blob {
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 50%;
+      width: 34%;
+      width: clamp(348px, 93%, 652px);
+      transform: translate(-51%, 129%);
+   }
    &__wrapper {
       width: 100%;
-      height: 200vh;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
+      background-color: rgba(222, 184, 135, 0.363);
    }
    &__body {
       text-align: center;
@@ -34,175 +54,264 @@
    &__text {
       font-family: var(--second-family);
       font-weight: 600;
-      font-size: 40px;
+      font-size: clamp(1.25rem, 3.9063vw, 2.5rem);
       line-height: 130%;
       text-align: center;
       color: var(--white);
    }
+   @media (max-width: 376px) {
+      &__bg-clouds {
+         min-height: 94vh;
+      }
+   }
 }
 
-.now-imagine-cloud {
-   // background-color: rgb(155, 255, 127);
+.now-imagine-clouds {
    position: absolute;
-   img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+   &--img {
+      img {
+         width: 100%;
+         height: auto;
+         object-fit: cover;
+      }
    }
-   &__1--small-topcenter {
-      max-width: 9%;
-      top: 17%;
-      left: 49%;
+   &__top-left {
+      top: 0;
+      top: 130px;
+      left: 0;
+      width: clamp(80px, 30vw, 766px);
+      height: clamp(112px, 21vw, 406px);
    }
-
-   &__1--big-bottomleft {
-      max-width: 36%;
-      top: 37%;
-      left: -14%;
+   &__top-right {
+      top: 63px;
+      right: 0;
+      width: clamp(136px, 32.2396vw, 619px);
+      height: clamp(94px, 19.8438vw, 381px);
    }
-
-   &__1--big-bottomright {
-      max-width: 35%;
-      right: -12%;
-      top: 40%;
+   &__bottom-left {
+      bottom: 65px;
+      left: 0;
+      width: clamp(130px, 29.0104vw, 557px);
+      height: clamp(116px, 20.2083vw, 388px);
    }
-
-   &__2--small-topleft {
-      max-width: 22%;
-      top: 17%;
-      left: 8%;
+   &__bottom-right {
+      bottom: 0;
+      right: 0;
+      width: clamp(169px, 30.2604vw, 581px);
+      height: clamp(132px, 19.3229vw, 371px);
    }
-
-   &__2--big-topleft {
-      width: 35%;
-      top: 18%;
-      left: -10%;
+   &__top-center {
+      top: 136px;
+      right: 42.6%;
+      width: clamp(78px, 8.4896vw, 163px);
+      height: clamp(43px, 4.7396vw, 91px);
    }
-
-   &__2--big-topright-revers {
-      width: 26%;
+   &__bottom-center {
+      bottom: 160px;
+      right: 54.6%;
+      width: clamp(70px, 10.5208vw, 202px);
+      height: clamp(41px, 6.1458vw, 118px);
       transform: scaleX(-1);
-      right: 6%;
-      top: 14%;
    }
-
-   &__2--big-topright {
-      width: 41%;
-      right: -17%;
-      top: 11%;
+   &__top-left--big {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: clamp(169px, 117%, 645px);
+      height: clamp(124px, 102%, 378px);
+      transform: translate(clamp(-172px, -11.6211vw, -114px), 26px);
    }
-
-   &__2--small-bottomleft {
-      width: 17%;
-      top: 46%;
-      left: 13%;
-      z-index: -2;
+   &__top-left--small {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: clamp(112px, 71%, 422px);
+      height: 62%;
    }
-
-   &__2--small-center {
-      width: 10%;
-      top: 45%;
-      left: 35%;
+   &__top-right--md {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translate(clamp(100px, 18vw, 353px), clamp(30px, 5vw, 103px));
+      width: clamp(199px, 133%, 813px);
    }
-
-   &__2--small-bottomright {
-      width: 17%;
-      right: 14%;
-      top: 42%;
-      z-index: -2;
+   &__top-right--revers {
+      position: absolute;
+      top: 1.1979vw;
+      left: 0;
+      width: clamp(122px, 80%, 488px);
+      transform: scaleX(-1);
+   }
+   &__bottom-left--big {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: clamp(202px, 125%, 694px);
+      transform: translate(
+         clamp(-266px, -13.8542vw, -117px),
+         clamp(-21px, -1.0938vw, -5px)
+      );
+   }
+   &__bottom-left--small {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: clamp(93px, 55%, 314px);
+      transform: translateY(9px);
+   }
+   &__bottom-right--big {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: clamp(246px, 120%, 693px);
+      transform: translate(clamp(127px, 13.0208vw, 250px), -11px);
+   }
+   &__bottom-right--small {
+      position: absolute;
+      top: 1.9792vw;
+      left: 0;
+      width: clamp(112px, 53%, 314px);
+   }
+   @media (max-width: 376px) {
+      &__top-left {
+         top: 154px;
+      }
+      &__top-right {
+      }
+      &__bottom-left {
+         bottom: 13px;
+      }
+      &__bottom-right {
+      }
+      &__top-center {
+         top: 68px;
+         right: 48.6%;
+      }
+      &__bottom-center {
+         bottom: 84px;
+         right: 53.6%;
+      }
    }
 }
-
 .nom-imagine-star {
    position: absolute;
-   width: 78px;
-   height: 78px;
-   top: 0;
-   left: 0;
+   width: clamp(20px, 4.0625vw, 78px);
    img {
    }
    &__1 {
-      top: 15%;
-      left: 34%;
+      top: 4vw;
+      left: 34vw;
    }
 
    &__2 {
-      top: 20%;
-      left: 41%;
+      top: 10vw;
+      left: 41vw;
    }
 
    &__3 {
-      top: 21%;
-      left: 62%;
+      top: 12vw;
+      right: 34vw;
    }
 
    &__4 {
-      top: 30%;
-      left: 91%;
+      top: 23vw;
+      right: 9vw;
    }
 
    &__5 {
-      top: 41%;
-      left: 78%;
+      bottom: 15vw;
+      right: 17vw;
    }
 
    &__6 {
-      top: 42%;
-      left: 54%;
+      bottom: 13vw;
+      right: 38vw;
    }
 
    &__7 {
-      top: 40%;
-      left: 36%;
+      bottom: 14vw;
+      left: 36vw;
    }
 
    &__8 {
-      top: 43%;
-      left: 22%;
+      bottom: 11vw;
+      left: 22vw;
    }
 
    &__9 {
-      top: 47%;
-      left: 47%;
+      bottom: 5vw;
+      left: 47vw;
    }
 
    &__10 {
-      top: 49%;
-      left: 65%;
+      bottom: 2vw;
+      right: 26vw;
+   }
+   @media (max-width: 1024px) {
+      &__1 {
+         top: 32vw;
+         left: 9vw;
+      }
+      &__4 {
+         top: 51vw;
+         right: 9vw;
+      }
+      &__5 {
+         bottom: 74vw;
+         right: 5vw;
+      }
+      &__6 {
+         bottom: 45vw;
+         right: 38vw;
+      }
+      &__8 {
+         bottom: 60vw;
+         left: 3vw;
+      }
+      &__9 {
+         bottom: 28vw;
+         left: 23vw;
+      }
    }
 }
 
 .nom-imagine-moon {
    position: absolute;
-   width: 9%;
-   top: 11%;
-   left: 45%;
+   width: clamp(81px, 8.6458vw, 166px);
+   top: 0;
+   left: clamp(76px, 45.1042vw, 866px);
    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
    }
+   @media (max-width: 376px) {
+      left: clamp(76px, 19.1042vw, 866px);
+   }
 }
-
 .now-imagine-blob {
-   position: absolute;
-   bottom: 41%;
-   left: 22%;
-   z-index: -3;
-   width: 58%;
    &__rope {
-      position: relative;
-   }
-
-   &__blob-on {
       position: absolute;
-      top: 95%;
-      left: 17%;
+      top: 0;
+      left: 50%;
+      overflow: hidden;
+      transform: translate(-50%, -100%);
+      width: clamp(330px, 66vw, 1267px);
+      height: clamp(192px, 28vw, 480px);
    }
-
-   &__blob-off {
+   &__circle {
       position: absolute;
-      top: 95%;
-      left: 37%;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 100%;
+      height: 197%;
+      border-radius: 50%;
+      border: 1px solid rgb(255, 255, 255);
+   }
+   @media (max-width: 1024px) {
+      &__rope {
+         height: clamp(192px, 43vw, 315px);
+      }
    }
 }

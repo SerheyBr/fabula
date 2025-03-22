@@ -1,0 +1,98 @@
+.you-need {
+   &__wrapper {
+   }
+
+   &__title {
+      text-align: center;
+      margin-bottom: 87px;
+   }
+}
+.you-need-facts {
+   &__box {
+      position: relative;
+      width: clamp(315px, 100%, 863px);
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      // height: 335px;
+      padding: 66px 54px 47px 54px;
+   }
+
+   &__title {
+      position: absolute;
+      top: -44px;
+      left: 50%;
+      transform: rotate(-6deg) translateX(-50%);
+      background: #c6f806;
+      width: clamp(122px, 11.4583vw, 220px);
+      height: clamp(36px, 3.3854vw, 65px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 138px;
+      font-family: var(--font3-1);
+      font-weight: 400;
+      font-size: clamp(1.25rem, 1.875vw, 2.25rem);
+      line-height: 127%;
+      color: var(--black-text);
+   }
+
+   &__text {
+      font-family: var(--second-family);
+      font-weight: 600;
+      // font-size: clamp(1rem, 1.6667vw, 2rem);
+      font-size: 2rem;
+      line-height: 130%;
+      text-align: center;
+      color: var(--white);
+      margin-bottom: 25px;
+      span {
+         color: #c6f806;
+      }
+   }
+
+   &__subtitle {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: clamp(0.9375rem, 1.25vw, 1.5rem);
+      text-align: center;
+      color: #837d8a;
+   }
+
+   &__procent {
+      position: relative;
+      width: 163px;
+      height: 163px;
+      border-radius: 50%;
+      background-color: brown;
+      font-family: var(--second-family);
+      font-weight: 600;
+      font-size: clamp(1.3125rem, 1.6667vw, 2rem);
+      line-height: 130%;
+      text-align: center;
+      color: #c6f806;
+   }
+
+   &__procent--left {
+   }
+
+   &__procent--right {
+   }
+}
+
+.circle-progres {
+   stroke-dasharray: 436;
+   stroke-dashoffset: 436;
+   stroke-linecap: round;
+   transform: rotate(-90deg);
+   transform-origin: 50% 50%;
+   animation: big 1.5s ease-in-out;
+}
+@keyframes big {
+   from {
+      stroke-dashoffset: 436;
+   }
+   to {
+      stroke-dashoffset: 60;
+   }
+}
