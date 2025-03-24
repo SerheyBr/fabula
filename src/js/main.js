@@ -1,7 +1,7 @@
 // alert(window.innerHeight + 'px')
 
-// const baseWidth = 1920
-const baseWidth = 1200
+const baseWidth = 1920
+// const baseWidth = 1200
 const baseFontSize = 16
 
 const calculationVw = (px) => {
@@ -28,5 +28,7 @@ const clampSizesBlock = (min, max, text = '') => {
 
 // clampSizesBlock(19, 82)
 // clampSizesBlock(122, 220)
-clampSizesBlock(315, 1338)
-clampFonts(21, 32)
+// clampSizesBlock(315, 1338)
+clampFonts(16, 24)
+clampFonts(24, 48)
+clampFonts(14, 16)
