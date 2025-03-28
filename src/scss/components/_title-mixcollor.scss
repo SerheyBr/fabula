@@ -10,4 +10,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
    }
+   @media (max-width: 1024px) {
+      font-size: clamp(1.5rem, 4.8828vw, 3.125rem);
+   }
 }

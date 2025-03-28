@@ -1,7 +1,7 @@
 // alert(window.innerHeight + 'px')
 
+// const baseWidth = 1920
 const baseWidth = 1920
-// const baseWidth = 1200
 const baseFontSize = 16
 
 const calculationVw = (px) => {
@@ -26,12 +26,11 @@ const clampSizesBlock = (min, max, text = '') => {
 // console.log(calculationVw(202))
 // console.log(calculationVw(166))
 
-// clampSizesBlock(19, 82)
-// clampSizesBlock(122, 220)
-// clampSizesBlock(315, 1338)
-clampFonts(16, 24)
-clampFonts(24, 48)
-clampFonts(14, 16)
+clampSizesBlock(50, 183)
+clampFonts(20, 40)
+clampFonts(30, 64)
+clampFonts(16, 20)
+clampFonts(20, 24)
 
 //проверка работы слайдера
 const swiper = new Swiper('.slider-customers__slider', {
