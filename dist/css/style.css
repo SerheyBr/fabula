@@ -230,12 +230,13 @@ body {
 
 .tag {
   border-radius: 138px;
-  font-family: var(--font3);
+  font-family: var(--font3-1);
   font-weight: 400;
   line-height: 127%;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  text-align: center;
 }
 
 .footer {
@@ -2321,6 +2322,187 @@ body {
     transform: rotate(360deg);
   }
   .achieving-goal__puzzle:nth-child(4) {
+    display: none;
+  }
+}
+
+.projects {
+  position: relative;
+  padding-top: 700px;
+}
+.projects__title {
+  -webkit-backdrop-filter: blur(60.5999984741px);
+  backdrop-filter: blur(60.5999984741px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px 27px;
+  font-family: var(--font3-2);
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 110%;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 114px;
+}
+.projects__title span {
+  background: linear-gradient(102deg, #9643f5 0%, #b16ffc 45.52%, #7c2dd6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.projects__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+@media (max-width: 800px) {
+  .projects__title {
+    font-size: clamp(1.875rem, 7.3333vw, 4rem);
+    background: none;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+.projects-item {
+  max-width: 616px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.projects-item:nth-child(odd) {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+.projects-item__img {
+  border-radius: 20px;
+  overflow: hidden;
+  max-height: 309px;
+  margin-bottom: 16px;
+}
+.projects-item__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.projects-item__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.projects-item__title {
+  font-family: var(--font3-2);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 127%;
+  color: var(--white);
+  margin-bottom: 3px;
+}
+.projects-item__subtitle {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 127%;
+  color: var(--white);
+}
+.projects-item__tag {
+  font-family: var(--font3-1);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 127%;
+  white-space: nowrap;
+  color: var(--violet);
+  border: 1px solid var(--violet);
+  padding: 10px 15px;
+}
+.projects-item__tag--white {
+  color: var(--pink);
+  border: 1px solid var(--pink);
+}
+.projects-item__tag--yellow {
+  color: #c6f806;
+  border: 1px solid #c6f806;
+}
+@media (max-width: 800px) {
+  .projects-item__title {
+    font-size: clamp(1.25rem, 3.6667vw, 2rem);
+  }
+}
+@media (max-width: 400px) {
+  .projects-item__subtitle {
+    margin-bottom: 16px;
+  }
+  .projects-item__footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+}
+
+.projects-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.projects-bg__el {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  position: absolute;
+}
+.projects-bg__blur--big-1 {
+  top: 14%;
+  left: 0;
+}
+.projects-bg__blur--big-2 {
+  top: 3%;
+  right: 0;
+}
+.projects-bg__blur--small-1 {
+  top: 21%;
+  left: 5%;
+}
+.projects-bg__blur--small-2 {
+  top: 29%;
+  left: 7%;
+}
+.projects-bg__blur--small-3 {
+  top: 14%;
+  right: 43%;
+}
+.projects-bg__blur--small-4 {
+  top: 16%;
+  right: 6%;
+}
+.projects-bg__blur--small-5 {
+  top: 23%;
+  right: 4%;
+}
+@media (max-width: 800px) {
+  .projects-bg {
     display: none;
   }
 }

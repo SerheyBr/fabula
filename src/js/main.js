@@ -26,8 +26,8 @@ const clampSizesBlock = (min, max, text = '') => {
 // console.log(calculationVw(202))
 // console.log(calculationVw(166))
 
-clampSizesBlock(50, 183)
-clampFonts(20, 40)
-clampFonts(30, 64)
-clampFonts(16, 20)
-clampFonts(20, 24)
+// clampSizesBlock(50, 183)
+// clampFonts(20, 40)
+// clampFonts(30, 64)
+// clampFonts(16, 20)
+clampFonts(20, 32)
