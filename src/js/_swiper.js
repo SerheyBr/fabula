@@ -80,3 +80,12 @@ const swiper3 = new Swiper('.ribbons-slider-2', {
    //    },
    // },
 })
+
+const swiper4 = new Swiper('.give-floor-slider', {
+   slidesPerView: 1,
+   spaceBetween: 0,
+   pagination: {
+      el: '.give-floor-slider-pagination',
+      clickable: true,
+   },
+})

@@ -26,11 +26,19 @@ const clampSizesBlock = (min, max, text = '') => {
 // console.log(calculationVw(202))
 // console.log(calculationVw(166))
 
-// clampSizesBlock(50, 183)
+clampSizesBlock(33, 85)
 // clampFonts(20, 40)
 // clampFonts(30, 64)
 // clampFonts(16, 20)
-clampFonts(20, 32)
+// clampFonts(30, 64)
+
+const resultItems = document.querySelectorAll('.result-item')
+resultItems.forEach((el) => {
+   el.addEventListener('click', (e) => {
+      const el = e.currentTarget
+      el.classList.add('active')
+   })
+})
 
 //проверка работы слайдера
 const swiper = new Swiper('.slider-customers__slider', {
@@ -113,6 +121,15 @@ const swiper3 = new Swiper('.ribbons-slider-2', {
    //       speed: 5000,
    //    },
    // },
+})
+
+const swiper4 = new Swiper('.give-floor-slider', {
+   slidesPerView: 1,
+   spaceBetween: 0,
+   pagination: {
+      el: '.give-floor-slider-pagination',
+      clickable: true,
+   },
 })
 
 //# sourceMappingURL=main.js.map
