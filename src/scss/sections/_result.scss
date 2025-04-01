@@ -1,5 +1,4 @@
 .result {
-   display: none;
    &__wrapper {
       display: flex;
       justify-content: space-between;
@@ -63,7 +62,6 @@
       }
 
       &__info {
-         // background-color: #b16ffc;
          margin: 0 auto;
       }
       &__img {
@@ -73,8 +71,12 @@
          display: none;
       }
       &__list {
-         // background-color: antiquewhite;
          max-width: 100%;
+      }
+   }
+   @media (max-width: 710px) {
+      &__title {
+         font-size: 30px;
       }
    }
 }
@@ -84,9 +86,10 @@
    padding: 15px 20px;
    background: rgba(255, 255, 255, 0.1);
    border-radius: 10px;
-   &__wrapper {
+   &__trigger {
       display: flex;
       align-items: center;
+      cursor: pointer;
    }
 
    &__circle {
@@ -94,11 +97,19 @@
       position: relative;
       width: 55px;
       height: 55px;
+      align-self: flex-start;
       svg {
          width: 100%;
          height: 100%;
          transform: rotate(-90deg);
       }
+   }
+   &__header {
+      // background-color: #d62d2d39;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      // transition: all 0.3s;
    }
    &__circle--progress {
       stroke-dashoffset: 147.65px;
@@ -137,6 +148,8 @@
       height: 0;
       opacity: 0;
       transition: all 0.5s;
+      position: relative;
+      z-index: -1;
    }
    &__text {
       font-family: var(--second-family);
@@ -144,6 +157,7 @@
       font-size: 16px;
       color: var(--white);
       line-height: 120%;
+      margin-bottom: 17px;
    }
 
    &__days {
@@ -153,16 +167,51 @@
       line-height: 150%;
       color: rgba(255, 255, 255, 0.5);
       white-space: nowrap;
-      align-self: self-start;
+      margin-bottom: 7px;
+      // align-self: self-start;
    }
-   &__img {
+   // &__days--mobil {
+   //    margin-bottom: 7px;
+   //    display: none;
+   // }
+   &__img--mobil {
       border-radius: 13px;
       overflow: hidden;
       width: 400px;
+      display: none;
       img {
          width: 100%;
          height: 100%;
          object-fit: cover;
+         transform: scale(1.1);
+      }
+   }
+
+   @media (max-width: 1400px) {
+      &__circle {
+      }
+      &__img--mobil {
+         display: block;
+      }
+   }
+   @media (max-width: 1024px) {
+      &__header {
+         flex-direction: column;
+         align-items: flex-start;
+      }
+      &__info {
+         margin-right: 0;
+      }
+   }
+   @media (max-width: 710px) {
+      &__info {
+         max-width: clamp(200px, 53vw, 500px);
+      }
+      &__img--mobil {
+         width: 283px;
+         height: 142px;
+         position: relative;
+         left: -78px;
       }
    }
 }

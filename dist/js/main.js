@@ -26,11 +26,11 @@ const clampSizesBlock = (min, max, text = '') => {
 // console.log(calculationVw(202))
 // console.log(calculationVw(166))
 
-clampSizesBlock(33, 85)
+clampSizesBlock(315, 1004)
 // clampFonts(20, 40)
-// clampFonts(30, 64)
-// clampFonts(16, 20)
-// clampFonts(30, 64)
+clampFonts(25, 64)
+clampFonts(15, 32)
+clampFonts(20, 24)
 
 const resultItems = document.querySelectorAll('.result-item')
 resultItems.forEach((el) => {
