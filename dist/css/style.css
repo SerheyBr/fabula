@@ -3510,4 +3510,111 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+.which-package-box {
+  position: relative;
+  padding: 60px;
+  border-radius: 23px;
+  background: linear-gradient(56deg, rgba(171, 139, 207, 0.1) 0%, rgba(138, 49, 239, 0.1) 100%);
+}
+.which-package-box__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.which-package-box__bg-myltiply {
+  position: absolute;
+  top: 4%;
+  left: 12%;
+}
+.which-package-box__bg-equals {
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+}
+.which-package-box__bg-minus {
+  position: absolute;
+  top: 11%;
+  right: 5%;
+}
+.which-package-box__bg-plus {
+  position: absolute;
+  right: 17%;
+  bottom: 1%;
+}
+.which-package-box__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.which-package-box__title {
+  font-family: var(--font3-2);
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 110%;
+  color: var(--white);
+  margin-bottom: 20px;
+  text-align: center;
+}
+.which-package-box__description {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  color: var(--white);
+  margin-bottom: 25px;
+  max-width: 460px;
+  text-align: center;
+}
+.which-package-box__btn {
+  white-space: nowrap;
+  padding: 15px 30px;
+}
+@media (max-width: 700px) {
+  .which-package-box {
+    padding: 30px;
+  }
+  .which-package-box__content {
+    width: 100%;
+  }
+  .which-package-box__title {
+    font-size: 20px;
+  }
+  .which-package-box__description {
+    font-size: 16px;
+  }
+  .which-package-box__btn {
+    padding: 10px 15px;
+  }
+  .which-package-box__bg-equals {
+    width: clamp(50px, 15vw, 112px);
+    left: 5%;
+    bottom: -10%;
+  }
+  .which-package-box__bg-myltiply {
+    width: clamp(70px, 15vw, 176px);
+    top: -4%;
+    left: 12%;
+  }
+  .which-package-box__bg-minus {
+    width: clamp(70px, 15vw, 176px);
+    top: -11%;
+    right: 5%;
+  }
+  .which-package-box__bg-plus {
+    width: clamp(70px, 15vw, 176px);
+    right: 17%;
+    bottom: -10%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
