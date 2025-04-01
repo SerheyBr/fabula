@@ -30,7 +30,7 @@ clampSizesBlock(315, 1004)
 // clampFonts(20, 40)
 clampFonts(25, 64)
 clampFonts(15, 32)
-clampFonts(20, 24)
+clampFonts(30, 64)
 
 const resultItems = document.querySelectorAll('.result-item')
 resultItems.forEach((el) => {
