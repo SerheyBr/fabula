@@ -3511,6 +3511,10 @@ body {
   }
 }
 
+.which-package {
+  margin-bottom: 265px;
+}
+
 .which-package-box {
   position: relative;
   padding: 60px;
@@ -3616,5 +3620,91 @@ body {
     right: 17%;
     bottom: -10%;
   }
+}
+
+.faq {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fbf5ff), to(#fbf5ff));
+  background: linear-gradient(180deg, #fbf5ff 0%, #fbf5ff 100%);
+  padding-top: 135px;
+  margin-bottom: 190px;
+}
+.faq__title {
+  max-width: 700px;
+  font-family: var(--font3-2);
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 110%;
+  text-align: center;
+  color: var(--black-text);
+  margin: 0 auto;
+  margin-bottom: 72px;
+}
+.faq-item {
+  border-top: 1px solid #000;
+}
+.faq-item:last-child {
+  border-bottom: 1px solid #000;
+}
+.faq-item__trigger {
+  padding: 30px 0 30px 30px;
+}
+.faq-item__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.faq-item__title {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+.faq-item__arrow {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.faq-item__text {
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: #768396;
+  max-width: 1000px;
+  line-height: 120%;
+  -webkit-transform: translate(0, -200%);
+  -ms-transform: translate(0, -200%);
+  transform: translate(0, -200%);
+  height: 0;
+  position: relative;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.faq-item.active .faq-item__text {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  height: auto;
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+}
+
+.faq-item.active .faq-item__arrow {
+  -webkit-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
 }
 /*# sourceMappingURL=style.css.map */
