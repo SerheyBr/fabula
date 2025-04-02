@@ -152,6 +152,11 @@
          bottom: -80px;
       }
    }
+   @media (max-width: 1024px) {
+      &__box {
+         margin-bottom: 170px;
+      }
+   }
    @media (max-width: 650px) {
       &__title-mobil {
          display: block;

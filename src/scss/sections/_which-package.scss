@@ -1,5 +1,8 @@
 .which-package {
    margin-bottom: 265px;
+   @media (max-width: 770px) {
+      margin-bottom: 100px;
+   }
 }
 
 .which-package-box {

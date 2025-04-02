@@ -28,6 +28,11 @@
          margin: 0;
       }
    }
+   @media (max-width: 770px) {
+      &__title {
+         font-size: 30px;
+      }
+   }
 }
 
 .fixed-price-item {
@@ -149,7 +154,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       // grid-template-rows: minmax(70px, 100px) minmax(70px, 100px);
-      grid-auto-rows: minmax(70px, 100px);
+      grid-auto-rows: 70px;
       gap: 13px;
       font-family: var(--font-family);
       font-weight: 400;
@@ -195,6 +200,9 @@
    @media (max-width: 1500px) {
       padding: 0;
       width: 70%;
+      &__badges {
+         grid-auto-rows: minmax(70px, 100px);
+      }
    }
    @media (max-width: 1024px) {
       width: 100%;
@@ -209,11 +217,7 @@
       &__price {
          font-size: clamp(20px, 4vw, 30px);
       }
-      &__badges {
-         // grid-template-columns: 1fr;
-         // grid-template-rows: 70px;
-         // grid-auto-rows: 70px;
-      }
+
       &__badges--mobil-1column {
          grid-template-columns: 1fr;
       }

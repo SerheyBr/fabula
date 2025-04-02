@@ -91,6 +91,9 @@
          font-size: clamp(1.25rem, 1.25vw, 1.5rem);
       }
    }
+   @media (max-width: 770px) {
+      margin-bottom: 145px;
+   }
 }
 
 .while-thinking-decor {

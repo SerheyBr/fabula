@@ -2,14 +2,13 @@
    // margin-bottom: 215px;
    // display: none;
    // min-height: 100vh;
-
+   margin-bottom: -102px;
    &__wrapper {
       width: 100%;
       height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: rgba(255, 0, 0, 0.248);
    }
 
    &__body {
@@ -31,5 +30,8 @@
       line-height: 130%;
       text-align: center;
       color: var(--white);
+   }
+   @media (max-width: 580px) {
+      margin-bottom: -120px;
    }
 }

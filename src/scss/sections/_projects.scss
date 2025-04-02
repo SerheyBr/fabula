@@ -1,7 +1,7 @@
 .projects {
    position: relative;
    padding-top: 700px;
-   margin-bottom: 180px;
+   margin-bottom: 340px;
    &__wrapper {
    }
 
@@ -36,7 +36,13 @@
       display: flex;
       flex-direction: column;
    }
+   @media (max-width: 1024px) {
+      padding-top: 500px;
+      margin-bottom: 150px;
+   }
    @media (max-width: 800px) {
+      padding-top: 400px;
+      margin-bottom: 100px;
       &__title {
          font-size: clamp(1.875rem, 7.3333vw, 4rem);
          background: none;
@@ -44,6 +50,9 @@
          width: 100%;
          margin-bottom: 40px;
       }
+   }
+   @media (max-width: 500px) {
+      padding-top: 300px;
    }
 }
 
@@ -111,6 +120,7 @@
       color: #c6f806;
       border: 1px solid #c6f806;
    }
+
    @media (max-width: 800px) {
       &__title {
          font-size: clamp(1.25rem, 3.6667vw, 2rem);
