@@ -7,4 +7,10 @@
    text-align: center;
    color: var(--black);
    width: min-content;
+   cursor: pointer;
+   transition: all 0.4s;
+
+   &:hover {
+      background-color: #c8f806b3;
+   }
 }
