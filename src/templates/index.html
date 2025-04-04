@@ -21,16 +21,21 @@
    <body>
       <!-- pretier ignore-->
       @@include('components/_header.html')
-      <!-- pretier ignore-->
-      @@include('sections/_hero.html')
-      <!-- pretier ignore-->
-      @@include('sections/_ribbons.html')
-      <!-- pretier ignore-->
-      @@include('sections/_we-know.html')
-      <!-- pretier ignore-->
-      @@include('sections/_now-imagine.html')
-      <!-- pretier ignore-->
-      @@include('sections/_solution.html')
+      <div class="btn-scroll">
+         <!-- pretier ignore-->
+         @@include('sections/_hero.html')
+         <!-- pretier ignore-->
+         @@include('sections/_ribbons.html')
+         <!-- pretier ignore-->
+         @@include('sections/_we-know.html')
+         <!-- pretier ignore-->
+         @@include('sections/_now-imagine.html')
+         <!-- pretier ignore-->
+         @@include('sections/_solution.html')
+         <!-- pretier ignore-->
+         @@include('components/_hero-contact-us-btn.html')
+      </div>
+
       <!-- pretier ignore-->
       @@include('sections/_you-need.html')
       <!-- pretier ignore-->
@@ -62,6 +67,9 @@
          @@include('components/_footer.html')
       </div>
 
+      <!-- gsap -->
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
       <!-- слайдер-->
       <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
       <!-- lottie -->

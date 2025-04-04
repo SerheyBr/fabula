@@ -175,24 +175,26 @@
    stroke: #c6f806;
 }
 .circle-progres--50 {
-   animation-name: circle-50;
+   // animation-name: circle-50;
+   stroke-dashoffset: 296.82px;
 }
 .circle-progres--70 {
-   animation-name: circle-70;
+   // animation-name: circle-70;
+   stroke-dashoffset: 213.82px;
 }
-@keyframes circle-50 {
-   from {
-      stroke-dashoffset: 511.82px;
-   }
-   to {
-      stroke-dashoffset: 296.82px;
-   }
-}
-@keyframes circle-70 {
-   from {
-      stroke-dashoffset: 511.82px;
-   }
-   to {
-      stroke-dashoffset: 213.82px;
-   }
-}
+// @keyframes circle-50 {
+//    from {
+//       stroke-dashoffset: 511.82px;
+//    }
+//    to {
+//       stroke-dashoffset: 296.82px;
+//    }
+// }
+// @keyframes circle-70 {
+//    from {
+//       stroke-dashoffset: 511.82px;
+//    }
+//    to {
+//       stroke-dashoffset: 213.82px;
+//    }
+// }

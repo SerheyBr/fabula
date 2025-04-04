@@ -1,6 +1,7 @@
 // alert(window.innerHeight + 'px')
 
 // const baseWidth = 1920
+
 const baseWidth = 1920
 const baseFontSize = 16
 
@@ -23,15 +24,57 @@ const clampSizesBlock = (min, max, text = '') => {
    console.log(res, text)
 }
 
-// console.log(calculationVw(202))
-// console.log(calculationVw(166))
+// accordeon action
+document.querySelectorAll('.faq-item').forEach((el) => {
+   el.querySelector('.faq-item__trigger').addEventListener('click', (e) => {
+      const trigger = e.currentTarget
 
-clampFonts(20, 40)
-
-const resultItems = document.querySelectorAll('.result-item')
-resultItems.forEach((el) => {
-   el.addEventListener('click', (e) => {
-      const el = e.currentTarget
-      el.classList.add('active')
+      if (el.classList.contains('active')) {
+         el.classList.remove('active')
+      } else {
+         document
+            .querySelectorAll('.faq-item')
+            .forEach((el) => el.classList.remove('active'))
+         el.classList.add('active')
+      }
    })
 })
+
+//ленивая подгрузка картинок
+// function lazyLoadImages() {
+//    const images = document.querySelectorAll('img[data-src]')
+
+//    if ('IntersectionObserver' in window) {
+//       const observer = new IntersectionObserver(
+//          (entries, observer) => {
+//             console.log(entries)
+//             console.log(observer)
+//             entries.forEach((entry) => {
+//                if (entry.isIntersecting) {
+//                   console.log('true')
+//                   const img = entry.target
+//                   img.src = img.getAttribute('data-src')
+//                   img.removeAttribute('data-src')
+//                   img.classList.add('loaded') // можно сделать fade-in в CSS
+//                   observer.unobserve(img)
+//                }
+//             })
+//          },
+//          {
+//             rootMargin: '0px 0px 200px 0px', // предварительная подгрузка
+//             threshold: 0.1,
+//          },
+//       )
+//       console.log(images)
+//       images.forEach((img) => observer.observe(img))
+//    } else {
+//       // Fallback для старых браузеров
+//       images.forEach((img) => {
+//          img.src = img.getAttribute('data-src')
+//          img.removeAttribute('data-src')
+//       })
+//       console.log('asdasd')
+//    }
+// }
+
+// document.addEventListener('DOMContentLoaded', lazyLoadImages)

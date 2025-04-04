@@ -43,6 +43,10 @@
 //sizes
 :root {
    --header-height: 143px;
+
+   @media (max-width: 1024px) {
+      --header-height: 143px;
+   }
    @media (max-height: 880px) {
       --header-height: 80px;
    }

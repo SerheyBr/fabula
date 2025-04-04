@@ -56,8 +56,9 @@
       font-size: clamp(1.25rem, 3.9063vw, 2.5rem);
       line-height: 130%;
       text-align: center;
-      color: var(--white);
+      color: #8e8e8e89;
    }
+
    @media (max-width: 376px) {
       &__bg-clouds {
          min-height: 94vh;

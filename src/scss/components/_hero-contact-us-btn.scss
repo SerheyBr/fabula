@@ -1,0 +1,66 @@
+.hero-contact-us {
+   position: fixed;
+   bottom: 0;
+   left: 50%;
+   transform: translate(-50%, 0);
+   z-index: 1;
+   &__wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 70px;
+      backdrop-filter: blur(25.799999237060547px);
+      background: rgba(255, 255, 255, 0.08);
+      gap: 30px;
+      padding: 20px 40px;
+      width: max-content;
+   }
+   &__mail {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0.3;
+   }
+   &__phone {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0.3;
+   }
+   &__btn {
+      padding: 15px 38px;
+      white-space: nowrap;
+   }
+   @media (max-width: 1024px) {
+      margin-top: 0;
+   }
+   @media (max-width: 510px) {
+      padding: 15px 30px;
+
+      &__mail {
+         width: 25px;
+         height: 25px;
+      }
+      &__phone {
+         width: 25px;
+         height: 25px;
+      }
+      &__btn {
+         padding: 15px 30px;
+         font-size: 16px;
+      }
+   }
+}
+
+.hero-contact-us.sticky {
+   position: absolute;
+}
+
+.btn-scroll {
+   position: relative;
+   padding-bottom: 40px;
+   margin-bottom: 40px;
+   @media (max-width: 500px) {
+      padding-bottom: 60px;
+   }
+}
