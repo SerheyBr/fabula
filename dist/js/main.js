@@ -182,7 +182,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
       })
    }
 
-   activeitItemFromResultList()
+   ScrollTrigger.create({
+      trigger: '.result', // замени на нужный тебе селектор
+      start: 'top 70%', // когда верх секции достигнет 70% окна
+      once: true, // запустится один раз
+      onEnter: () => {
+         activeitItemFromResultList()
+      },
+   })
 
    resultList.forEach((el, index) => {
       el.addEventListener('click', (e) => {
@@ -241,11 +248,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
    const cloudsRightBottom = document.querySelector(
       '.now-imagine-clouds__bottom-right',
    )
-
-   // animationCloudes(cloudsLeftTop, -200, -50)
-   // animationCloudes(cloudsRightTop, 250, 150)
-   // animationCloudes(cloudsLeftBottom, -300, -200)
-   // animationCloudes(cloudsRightBottom, 350, 250)
 
    const timelineCloud = gsap.timeline({
       scrollTrigger: {
@@ -346,10 +348,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
    }
 
    document.querySelectorAll('.we-fabula-column__title--num').forEach((el) => {
-      const targetValue = parseInt(el.getAttribute('data-target')) || 70
+      const targetValue = parseInt(el.getAttribute('data-target')) || 100
 
       animateCount(el, targetValue)
    })
+
+   //анимация секции we offer
 })
 
 //проверка работы слайдера

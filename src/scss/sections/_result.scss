@@ -147,7 +147,8 @@
    }
    &__body {
       transform: translateY(-36px);
-      height: 0;
+      max-height: 0;
+      overflow: hidden;
       opacity: 0;
       transition: all 0.5s;
       position: relative;
@@ -172,10 +173,6 @@
       margin-bottom: 7px;
       // align-self: self-start;
    }
-   // &__days--mobil {
-   //    margin-bottom: 7px;
-   //    display: none;
-   // }
    &__img--mobil {
       border-radius: 13px;
       overflow: hidden;
@@ -228,9 +225,8 @@
 .result-item.active .result-item__body {
    transform: translateY(0);
    opacity: 1;
-   height: auto;
+   max-height: 200px;
 }
 .result-item.active .result-item__circle--progress {
-   // stroke-dashoffset: 0px;
    animation-name: circle;
 }

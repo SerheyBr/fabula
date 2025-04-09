@@ -2833,7 +2833,8 @@ body {
   -webkit-transform: translateY(-36px);
   -ms-transform: translateY(-36px);
   transform: translateY(-36px);
-  height: 0;
+  max-height: 0;
+  overflow: hidden;
   opacity: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -2925,7 +2926,7 @@ body {
   -ms-transform: translateY(0);
   transform: translateY(0);
   opacity: 1;
-  height: auto;
+  max-height: 200px;
 }
 
 .result-item.active .result-item__circle--progress {
