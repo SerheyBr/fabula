@@ -19,7 +19,7 @@
       line-height: 110%;
       color: var(--white);
       margin-bottom: 35px;
-      text-align: center;
+
       span {
          background: linear-gradient(
             102deg,
@@ -110,16 +110,13 @@
       }
    }
    &__header {
-      // background-color: #d62d2d39;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      // transition: all 0.3s;
    }
    &__circle--progress {
       stroke-dashoffset: 147.65px;
       stroke-dasharray: 147.65px;
-      // animation-name: circle;
       animation-duration: 7s;
    }
    &__num {

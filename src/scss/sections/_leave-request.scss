@@ -57,11 +57,14 @@
       padding: 30px;
       input {
          color: var(--pink);
+         font-family: var(--font-family);
+         font-weight: 400;
+         font-size: 24px;
       }
       input::placeholder {
-         font-family: var(--font3-1);
+         font-family: var(--font-family);
          font-weight: 400;
-         font-size: 16px;
+         font-size: 24px;
          line-height: 127%;
          color: #777;
       }

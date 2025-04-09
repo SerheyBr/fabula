@@ -216,15 +216,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
       tl.from(cloudsGrup, {
          x: grupStepX,
-         duration: 3,
+         duration: 2,
          ease: 'power3',
       })
       tl.from(
          cloudsGrup.children,
          {
             x: elStepX,
-            stagger: 0.2,
-            duration: 6,
+            stagger: 0.1,
+            duration: 7,
             ease: 'power3',
          },
          '<1',
@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
    timelineCloud
       .add(animationCloudes(cloudsLeftTop, -200, -50))
-      .add(animationCloudes(cloudsRightTop, 250, 150), '<0.7')
+      .add(animationCloudes(cloudsRightTop, 250, 150), '<0.1')
       .from(
          '.nom-imagine-moon',
          {
@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             duration: 5,
             ease: 'power3',
          },
-         '<0.9',
+         '<1',
       )
       .from(
          '.now-imagine-clouds__top-center',
@@ -278,15 +278,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
             duration: 3,
             ease: 'power3',
          },
-         '<0.5',
+         '<1.1',
       )
       .add(animationCloudes(cloudsLeftBottom, -300, -200), '<0.7')
-      .add(animationCloudes(cloudsRightBottom, 350, 250), '<0.7')
+      .add(animationCloudes(cloudsRightBottom, 350, 250), '<0.1')
 
    //анимация звезд
    document.querySelectorAll('.nom-imagine-star').forEach((el) => {
       gsap.to(el, {
-         scale: gsap.utils.random(0, 1),
+         scale: 0.1,
          duration: gsap.utils.random(3, 5), // Разная скорость анимации
          opacity: gsap.utils.random(0.7, 1),
          repeat: -1, // Бесконечный цикл
@@ -326,44 +326,49 @@ document.addEventListener('DOMContentLoaded', (event) => {
          scrub: 2, // Связь со скроллом (чем больше, тем плавнее)
       },
    })
+
+   //анимация цифр
+   const animateCount = (element, targetValue) => {
+      const count = { value: 0 }
+
+      gsap.to(count, {
+         value: targetValue,
+         duration: 3,
+         scrollTrigger: {
+            trigger: element,
+            start: 'top center',
+            toggleActions: 'play none none none',
+         },
+         onUpdate: () => {
+            element.textContent = `${Math.round(count.value)}`
+         },
+      })
+   }
+
+   document.querySelectorAll('.we-fabula-column__title--num').forEach((el) => {
+      const targetValue = parseInt(el.getAttribute('data-target')) || 70
+
+      animateCount(el, targetValue)
+   })
 })
 
 //проверка работы слайдера
-// const swiper = new Swiper('.slider-customers__slider', {
-//    slidesPerView: 9,
-//    spaceBetween: 0,
-//    loop: true,
-//    speed: 5000,
-//    allowTouchMove: false,
-
-//    autoplay: {
-//       delay: 0,
-//       disableOnInteraction: false,
-//    },
-//    freeMode: {
-//       enabled: true,
-//       momentum: false,
-//    },
-//    breakpoints: {
-//       340: {
-//          speed: 500,
-//       },
-//       768: {
-//          speed: 1500,
-//       },
-//       1024: {
-//          speed: 9000,
-//       },
-//    },
-// })
 
 const swiper4 = new Swiper('.give-floor-slider', {
    slidesPerView: 1,
    spaceBetween: 0,
+   loop: true,
    pagination: {
       el: '.give-floor-slider-pagination',
       clickable: true,
    },
+})
+
+swiper4.on('init', () => {
+   setTimeout(() => {
+      swiper4.slideTo(1)
+      swiper4.slideTo(0)
+   }, 10)
 })
 
 //# sourceMappingURL=main.js.map

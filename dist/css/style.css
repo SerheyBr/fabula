@@ -158,7 +158,6 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-right: 90px;
   font-family: var(--font-family);
   font-weight: 700;
   font-size: clamp(1.25rem, 1.2vw, 1.5rem);
@@ -198,6 +197,7 @@ body {
     max-width: 85px;
   }
 }
+
 .title-gradient {
   font-family: var(--font3-2);
   font-weight: 600;
@@ -413,15 +413,8 @@ body {
 
 .btn-scroll {
   position: relative;
-  padding-bottom: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
-@media (max-width: 500px) {
-  .btn-scroll {
-    padding-bottom: 60px;
-  }
-}
-
 .hero {
   position: relative;
   margin-bottom: 23px;
@@ -436,6 +429,20 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 85%;
+  background-image: url("../assets/img/Mask group.svg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 100%;
+  overflow: hidden;
 }
 .hero__bg {
   position: absolute;
@@ -464,8 +471,36 @@ body {
   right: 7%;
 }
 .hero__bg-crcl--5 {
-  top: 34%;
+  top: 54%;
   right: 4%;
+}
+.hero__bg-crcl--6 {
+  top: 44%;
+  right: 50%;
+}
+.hero__bg-crcl--7 {
+  bottom: 30%;
+  right: 50%;
+}
+.hero__bg-crcl--8 {
+  top: 14%;
+  left: 50%;
+}
+.hero__bg-crcl--9 {
+  top: 24%;
+  left: 50%;
+}
+.hero__bg-crcl--10 {
+  bottom: 24%;
+  left: 10%;
+}
+.hero__bg-crcl--11 {
+  bottom: 24%;
+  left: 20%;
+}
+.hero__bg-crcl--12 {
+  bottom: 24%;
+  left: 40%;
 }
 .hero__bg-stain--1 {
   bottom: 0%;
@@ -484,7 +519,7 @@ body {
   justify-content: space-between;
 }
 .hero__text-block {
-  max-width: 50%;
+  max-width: 60%;
 }
 .hero__title {
   position: relative;
@@ -708,7 +743,7 @@ body {
     align-items: center;
   }
   .hero__text-block {
-    max-width: 100%;
+    max-width: 90%;
     text-align: center;
     margin-bottom: 64px;
   }
@@ -741,9 +776,14 @@ body {
     margin-bottom: 40px;
   }
 }
-@media (max-width: 630px) {
+@media (max-width: 850px) {
   .hero__title--continued {
     bottom: -40%;
+  }
+}
+@media (max-width: 630px) {
+  .hero__title--continued {
+    bottom: -73%;
   }
   .hero__btn-chat-bot {
     min-width: 54px;
@@ -764,7 +804,6 @@ body {
     max-width: 315px;
   }
   .hero__title--continued {
-    bottom: -72%;
     right: -66%;
   }
   .hero__cursor {
@@ -1517,7 +1556,7 @@ body {
 }
 
 .solution {
-  margin-bottom: -102px;
+  margin-bottom: -250px;
 }
 .solution__wrapper {
   width: 100%;
@@ -2653,7 +2692,6 @@ body {
   line-height: 110%;
   color: var(--white);
   margin-bottom: 35px;
-  text-align: center;
 }
 .result__title span {
   background: linear-gradient(102deg, #9643f5 0%, #b16ffc 45.52%, #7c2dd6 100%);
@@ -3941,39 +3979,42 @@ body {
 }
 .leave-request__input input {
   color: var(--pink);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 24px;
 }
 .leave-request__input input::-webkit-input-placeholder {
-  font-family: var(--font3-1);
+  font-family: var(--font-family);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 24px;
   line-height: 127%;
   color: #777;
 }
 .leave-request__input input::-moz-placeholder {
-  font-family: var(--font3-1);
+  font-family: var(--font-family);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 24px;
   line-height: 127%;
   color: #777;
 }
 .leave-request__input input:-ms-input-placeholder {
-  font-family: var(--font3-1);
+  font-family: var(--font-family);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 24px;
   line-height: 127%;
   color: #777;
 }
 .leave-request__input input::-ms-input-placeholder {
-  font-family: var(--font3-1);
+  font-family: var(--font-family);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 24px;
   line-height: 127%;
   color: #777;
 }
 .leave-request__input input::placeholder {
-  font-family: var(--font3-1);
+  font-family: var(--font-family);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 24px;
   line-height: 127%;
   color: #777;
 }
