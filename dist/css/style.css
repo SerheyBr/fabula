@@ -3234,9 +3234,12 @@ body {
   border: 2px solid #c6f806;
 }
 
+.give-floor-slider .swiper-slide {
+  width: clamp(315px, 100%, 1124px);
+}
+
 .give-floor-slider {
   overflow: visible;
-  width: 1064px;
   width: clamp(315px, 100%, 1124px);
   margin: 0 auto;
   margin-bottom: 50px;

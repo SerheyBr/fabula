@@ -284,13 +284,11 @@
 }
 
 .give-floor-slider .swiper-slide {
-   // width: 1064px;
-   // height: 537px;
+   width: clamp(315px, 100%, 1124px);
 }
 
 .give-floor-slider {
    overflow: visible;
-   width: 1064px;
    width: clamp(315px, 100%, 1124px);
    margin: 0 auto;
    margin-bottom: 50px;
