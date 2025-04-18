@@ -105,6 +105,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       trigger: '.result', // замени на нужный тебе селектор
       start: 'top 70%', // когда верх секции достигнет 70% окна
       once: true, // запустится один раз
+      // markers: true,
       onEnter: () => {
          activeitItemFromResultList()
       },
@@ -221,31 +222,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
    })
 
    //анимация projects-item
-   const list = [...document.querySelector('.projects__items').children]
+   const sectionProjects = document.querySelector('.projects__wrapper')
+   const skrollDistansProjects = 10000
+   const projectItems = document.querySelectorAll('.projects-item')
+   document.querySelector('.result').style.marginTop =
+      skrollDistansProjects + 'px'
 
-   list.forEach((el) => {
-      gsap.from(el, {
-         opacity: 0,
-         y: 100,
-         scale: 0,
-         duration: 1.5,
-         scrollTrigger: {
-            trigger: el,
-            start: 'top bottom',
-         },
-      })
-   })
-
-   gsap.to('.projects-bg__el', {
-      y: '400%', // Двигаем фон вверх (можно поменять значение для другого эффекта)
-      ease: 'none',
-      // duration: 1,
+   const tlProjects = gsap.timeline({
       scrollTrigger: {
-         trigger: '.projects',
-         start: 'top bottom',
-         end: 'bottom top',
-         scrub: 2, // Связь со скроллом (чем больше, тем плавнее)
+         trigger: sectionProjects,
+         start: 'top top',
+         end: `+=${skrollDistansProjects}`,
+         pin: true,
+         scrub: 1,
+         pinSpacing: false,
+         // markers: true,
       },
+   })
+   projectItems.forEach((el, index) => {
+      tlProjects.to(el, { y: 0 }).to(el, { y: '-100vh', opacity: 0 })
    })
 
    //анимация цифр
@@ -273,4 +268,60 @@ document.addEventListener('DOMContentLoaded', (event) => {
    })
 
    //анимация секции we offer
+   const sectionOffer = document.querySelector('.offer')
+   const offerElementsInfo = document.querySelectorAll('.offer-item__info')
+   const lottieElements = document.querySelectorAll('.offer-item__img')
+   const scrollDistanceOffer = 7000
+   const nextSection = document.querySelector('.we-fabula')
+   nextSection.style.marginTop = `${scrollDistanceOffer}px`
+
+   const tlOffer = gsap.timeline({
+      scrollTrigger: {
+         trigger: sectionOffer,
+         start: 'top top',
+         end: `+=${scrollDistanceOffer}`,
+         pin: true,
+         scrub: 1,
+         // markers: true,
+      },
+   })
+
+   tlOffer
+      .to(offerElementsInfo[0], { y: '0' })
+      .to(lottieElements[0], { opacity: 1 })
+      .to({}, { duration: 1 })
+      .to(lottieElements[0], { opacity: 0 })
+      .to(offerElementsInfo[0], { y: '-50vh', opacity: 0 })
+      .to(offerElementsInfo[1], { y: '0' })
+      .to(lottieElements[1], { opacity: 1 })
+      .to({}, { duration: 1 })
+      .to(lottieElements[1], { opacity: 0 })
+      .to(offerElementsInfo[1], { y: '-50vh', opacity: 0 })
+      .to(offerElementsInfo[2], { y: '0' })
+      .to(lottieElements[2], { opacity: 1 })
+      .to({}, { duration: 1 })
+      .to(lottieElements[2], { opacity: 0 })
+      .to(offerElementsInfo[2], { y: '-50vh', opacity: 0 })
+
+   // console.log(window.innerWidth)
+   // if (window.innerWidth >= 1024) {
+   //    tlOffer
+   //       .from(offerElements[0], { y: '100vh' })
+   //       .to(lottieElements[0], { opacity: 1 })
+   //       .to({}, { duration: 1 })
+   //       .to(lottieElements[0], { opacity: 0 })
+   //       .to(offerElements[0], { y: '-50vh', opacity: 0 })
+   //       .to(offerElements[1], { y: '-100vh' })
+   //       .to(lottieElements[1], { opacity: 1 })
+   //       .to({}, { duration: 1 })
+   //       .to(lottieElements[1], { opacity: 0 })
+   //       .to(offerElements[1], { y: '-150vh', opacity: 0 })
+   //       .to(offerElements[2], { y: '-200vh' })
+   //       .to(lottieElements[2], { opacity: 1 })
+   //       .to({}, { duration: 1 })
+   //       .to(lottieElements[2], { opacity: 0 })
+   //       .to(offerElements[2], { y: '-250vh', opacity: 0 })
+   // }else{
+
+   // }
 })
