@@ -262,6 +262,7 @@ body {
 
 .footer {
   padding-top: 520px;
+  overflow: hidden;
 }
 .footer__bg {
   position: absolute;
@@ -313,6 +314,10 @@ body {
   line-height: 140%;
   color: var(--black-text);
 }
+.footer__copy p {
+  position: relative;
+  z-index: 1;
+}
 @media (max-width: 1024px) {
   .footer {
     padding-top: 200px;
@@ -323,7 +328,7 @@ body {
 }
 @media (max-width: 770px) {
   .footer {
-    padding-top: 100px;
+    padding-top: 0;
   }
 }
 
@@ -3927,8 +3932,12 @@ body {
   margin-bottom: 72px;
 }
 @media (max-width: 770px) {
+  .faq {
+    padding-top: 100px;
+  }
   .faq__title {
     font-size: clamp(30px, 5vw, 64px);
+    margin-bottom: 40px;
   }
 }
 
@@ -3988,6 +3997,9 @@ body {
 @media (max-width: 770px) {
   .faq-item__title {
     font-size: clamp(20px, 4vw, 32px);
+  }
+  .faq-item__trigger {
+    padding: 20px 0;
   }
 }
 

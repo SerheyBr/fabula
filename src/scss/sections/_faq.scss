@@ -19,8 +19,10 @@
    &__list {
    }
    @media (max-width: 770px) {
+      padding-top: 100px;
       &__title {
          font-size: clamp(30px, 5vw, 64px);
+         margin-bottom: 40px;
       }
    }
 }
@@ -71,6 +73,9 @@
    @media (max-width: 770px) {
       &__title {
          font-size: clamp(20px, 4vw, 32px);
+      }
+      &__trigger {
+         padding: 20px 0;
       }
    }
 }

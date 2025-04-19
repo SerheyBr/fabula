@@ -324,4 +324,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
    // }else{
 
    // }
+
+   //footer анимация
+   const footerBg = document.querySelector('.footer__bg')
+   const footer = document.querySelector('.footer')
+
+   gsap.from(footerBg, {
+      y: 0,
+      // scale: 0,
+      duration: 2,
+      scrollTrigger: {
+         trigger: footer,
+         start: 'top bottom',
+      },
+   })
 })
