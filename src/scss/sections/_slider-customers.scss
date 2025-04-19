@@ -51,6 +51,7 @@
       text-align: center;
       color: var(--white);
       margin-bottom: 15px;
+      white-space: nowrap;
    }
 
    &__num {
@@ -69,6 +70,9 @@
       text-align: center;
       line-height: 120%;
       color: rgba(255, 255, 255, 0.64);
+   }
+   @media (max-width: 376px) {
+      // min-width: 170px;
    }
 }
 
@@ -90,6 +94,11 @@
          animation: slider-customers-slider 10s linear infinite;
       }
    }
+   @media (max-width: 550px) {
+      &__slide {
+         min-width: 170px;
+      }
+   }
 }
 
 @keyframes slider-customers-slider {
@@ -97,6 +106,6 @@
       transform: translateX(0);
    }
    100% {
-      transform: translateX(-50%);
+      transform: translateX(-80%);
    }
 }
