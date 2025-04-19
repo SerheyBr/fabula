@@ -201,7 +201,7 @@
       padding: 0;
       width: 70%;
       &__badges {
-         grid-auto-rows: minmax(70px, 100px);
+         // grid-auto-rows: minmax(70px, 100px);
       }
    }
    @media (max-width: 1024px) {
@@ -220,6 +220,10 @@
 
       &__badges--mobil-1column {
          grid-template-columns: 1fr;
+      }
+      &__btn {
+         border-radius: 15px;
+         width: 100%;
       }
    }
 }

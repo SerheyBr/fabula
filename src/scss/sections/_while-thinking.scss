@@ -93,6 +93,13 @@
    }
    @media (max-width: 770px) {
       margin-bottom: 145px;
+      &__box {
+         // border: none;
+      }
+      &__text {
+         margin-bottom: 31px;
+         font-weight: 400;
+      }
    }
 }
 

@@ -86,18 +86,23 @@
    @media (max-width: 1024px) {
       width: calc(100% / 2);
       padding: 10px;
+      &__wrapper {
+         margin: 0;
+      }
       &:not(:last-child) {
          border-right: none;
       }
       &:nth-child(1) {
          border-right: 1px solid #8a31ef41;
          border-bottom: 1px solid #8a31ef41;
+         padding: 10px 10px 10px 0;
       }
       &:nth-child(2) {
          border-bottom: 1px solid #8a31ef41;
       }
       &:nth-child(3) {
          border-right: 1px solid #8a31ef41;
+         padding: 10px 10px 10px 0;
       }
    }
    @media (max-width: 700px) {
