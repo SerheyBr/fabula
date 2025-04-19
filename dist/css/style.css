@@ -1364,9 +1364,12 @@ body {
   text-align: center;
   color: rgba(142, 142, 142, 0.537254902);
 }
-@media (max-width: 376px) {
+@media (max-width: 550px) {
   .now-imagine__bg-clouds {
-    min-height: 94vh;
+    min-height: 70vh;
+  }
+  .now-imagine__wrapper {
+    height: 70vh;
   }
 }
 

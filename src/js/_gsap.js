@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
          {
             x: elStepX,
             stagger: 0.1,
-            duration: 7,
+            duration: 2,
             ease: 'power3',
          },
          '<1',

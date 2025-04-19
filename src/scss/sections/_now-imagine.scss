@@ -58,12 +58,19 @@
       text-align: center;
       color: #8e8e8e89;
    }
-
-   @media (max-width: 376px) {
+   @media (max-width: 550px) {
       &__bg-clouds {
-         min-height: 94vh;
+         min-height: 70vh;
+      }
+      &__wrapper {
+         height: 70vh;
       }
    }
+   // @media (max-width: 376px) {
+   //    &__bg-clouds {
+   //       min-height: 94vh;
+   //    }
+   // }
 }
 
 .now-imagine-clouds {
