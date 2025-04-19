@@ -87,8 +87,6 @@ if (window.innerWidth <= 1024) {
       const images = [
          ...el.querySelector('.give-floor-item-mobil__img').children,
       ]
-      // const beaforeBtn = el.querySelector('')
-      // console.log(el.querySelector('#exemple1-before'))
       const btnBefore = el.querySelector(`#exemple${index + 1}-before`)
       const btnAfter = el.querySelector(`#exemple${index + 1}-after`)
 
@@ -100,5 +98,4 @@ if (window.innerWidth <= 1024) {
          images[0].style.display = 'none'
       })
    })
-   console.log('asd')
 }
