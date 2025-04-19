@@ -323,22 +323,14 @@
          bottom: -40%;
       }
    }
-   // @media (max-width: 630px) {
-   //    &__title--continued {
-   //       bottom: -73%;
-   //    }
-   // }
+   @media (max-width: 650px) {
+      &__btn-chat-bot {
+         display: none;
+      }
+   }
    @media (max-width: 630px) {
       &__title--continued {
          bottom: -73%;
-      }
-      &__btn-chat-bot {
-         min-width: 54px;
-         height: 54px;
-         img {
-            width: 32px;
-            height: 28px;
-         }
       }
    }
    @media (max-width: 540px) {

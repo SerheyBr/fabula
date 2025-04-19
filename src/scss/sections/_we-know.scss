@@ -4,13 +4,13 @@
    background-position: center;
    background-size: cover;
    background-repeat: no-repeat;
-   min-height: 100vh;
+   height: 100vh;
    border-radius: 100%;
    position: relative;
    margin-bottom: 180px;
    &__wrapper {
       width: 100%;
-      min-height: 100vh;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -234,8 +234,8 @@
       }
    }
    @media (max-width: 750px) {
-      margin-top: -390px;
-      margin-bottom: -180px;
+      // margin-top: -390px;
+      margin-bottom: 50px;
       &__img {
          img {
             max-width: 180px;
@@ -266,33 +266,36 @@
       &__list-item {
          max-width: 180px;
          &:nth-child(1) {
-            top: 25%;
+            top: 8%;
          }
          &:nth-child(2) {
-            top: 32%;
+            top: 14%;
          }
          &:nth-child(3) {
+            top: 20%;
          }
          &:nth-child(4) {
             max-width: 110px;
+            top: 77%;
          }
          &:nth-child(5) {
+            top: 73%;
          }
          &:nth-child(6) {
-            top: 59%;
-            right: 0%;
+            top: 74%;
+            right: 37%;
          }
          &:nth-child(7) {
-            bottom: 37%;
+            bottom: 7%;
             right: 54%;
          }
          &:nth-child(8) {
-            bottom: 43%;
+            bottom: 40%;
             right: 0%;
          }
          &:nth-child(9) {
-            bottom: 41%;
-            left: 0%;
+            bottom: 13%;
+            left: 33%;
          }
          &:nth-child(10) {
             bottom: 52%;
@@ -301,16 +304,18 @@
             line-height: 150%;
          }
          &:nth-child(11) {
-            bottom: 30%;
+            bottom: 25%;
          }
          &:nth-child(12) {
+            bottom: 34%;
+            left: 0;
          }
          &:nth-child(13) {
             top: 29%;
          }
          &:nth-child(14) {
-            top: 32%;
-            left: 68%;
+            top: 38%;
+            left: 72%;
          }
       }
    }

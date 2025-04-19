@@ -2,7 +2,7 @@
    // margin-bottom: 215px;
    // display: none;
    // min-height: 100vh;
-   margin-bottom: -250px;
+   // margin-bottom: -250px;
    &__wrapper {
       width: 100%;
       height: 100vh;
@@ -31,7 +31,17 @@
       text-align: center;
       color: #8e8e8e89;
    }
+   @media (max-width: 1024px) {
+      &__wrapper {
+         height: 70vh;
+      }
+   }
    @media (max-width: 580px) {
-      margin-bottom: -120px;
+      // margin-bottom: -120px;
+   }
+   @media screen and (max-height: 600px) and (max-width: 1024px) {
+      &__wrapper {
+         height: 100vh;
+      }
    }
 }
