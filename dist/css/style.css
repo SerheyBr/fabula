@@ -1639,6 +1639,7 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  margin-bottom: -10vh;
 }
 .solution__body {
   text-align: center;
@@ -1673,6 +1674,11 @@ body {
 @media screen and (max-height: 600px) and (max-width: 1024px) {
   .solution__wrapper {
     height: 100vh;
+  }
+}
+@media (min-height: 600px) and (max-height: 750px) and (max-width: 1024px) {
+  .solution__wrapper {
+    margin-bottom: 0;
   }
 }
 
