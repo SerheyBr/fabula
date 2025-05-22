@@ -1,10 +1,10 @@
 .hero {
-   position: relative;
+   // position: relative;
    margin-bottom: 23px;
    min-height: calc(100vh - var(--header-height));
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
+   // display: flex;
+   // flex-direction: column;
+   // justify-content: center;
 
    &::after {
       content: '';
@@ -24,9 +24,10 @@
       position: absolute;
       width: 100vw;
       height: 150vh;
-
       overflow-x: hidden;
       z-index: -1;
+      top: calc(0px - var(--header-height) - 30px);
+      left: 0;
    }
 
    &__bg-decor {
@@ -105,6 +106,7 @@
    &__wrapper {
       display: flex;
       justify-content: space-between;
+      align-items: center;
    }
 
    &__text-block {
@@ -283,6 +285,9 @@
       }
    }
    @media (max-width: 1520px) {
+      &__bg {
+         top: calc(0px - var(--header-height) - 130px);
+      }
       &__text-block {
       }
       &__title--continued {
