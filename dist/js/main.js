@@ -25,7 +25,7 @@ if (window.innerWidth <= 1024) {
       const btnBefore = el.querySelector(`#exemple${index + 1}-before`)
       const btnAfter = el.querySelector(`#exemple${index + 1}-after`)
 
-      console.log(btnAfter)
+      // console.log(btnAfter)
       btnBefore.addEventListener('click', (e) => {
          images[0].style.display = 'block'
       })
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             document
                .querySelector('.hero-contact-us')
                .classList.remove('sticky'),
-         markers: false, // Поставь true, если хочешь видеть триггеры на экране
+         // markers: false,
       },
    })
 
@@ -259,26 +259,48 @@ document.addEventListener('DOMContentLoaded', (event) => {
    })
 
    //анимация projects-item
-   const sectionProjects = document.querySelector('.projects__wrapper')
-   const skrollDistansProjects = 8000
-   const projectItems = document.querySelectorAll('.projects-item')
-   document.querySelector('.result').style.marginTop =
-      skrollDistansProjects + 'px'
+   // const sectionProjects = document.querySelector('.projects__wrapper')
+   // const skrollDistansProjects = 8000
+   // const projectItems = document.querySelectorAll('.projects-item')
+   // document.querySelector('.result').style.marginTop =
+   //    skrollDistansProjects + 'px'
 
+   // const tlProjects = gsap.timeline({
+   //    scrollTrigger: {
+   //       trigger: sectionProjects,
+   //       start: 'top top',
+   //       end: `+=${skrollDistansProjects}`,
+   //       pin: true,
+   //       scrub: 1,
+   //       pinSpacing: false,
+   //       markers: true,
+   //    },
+   // })
+   // projectItems.forEach((el, index) => {
+   //    tlProjects.to(el, { y: 0 }).to(el, { y: '-100vh', opacity: 0 })
+   // })
+   const secProjects = document.querySelector('.projects')
+   const triggerSecProg = secProjects.querySelector('.projects__wrapper')
+   const listrSecProg = secProjects.querySelector('.projects__items')
+   const heightListProg = listrSecProg.clientHeight
+   const scrollDistanceProj = 3000
+   const actionTranslateY = heightListProg + window.innerHeight / 3
+   secProjects.style.marginBottom = `${scrollDistanceProj}px`
+   listrSecProg.style.transform = `translateY(${window.innerHeight}px)`
+   console.log(heightListProg)
    const tlProjects = gsap.timeline({
       scrollTrigger: {
-         trigger: sectionProjects,
+         trigger: triggerSecProg,
          start: 'top top',
-         end: `+=${skrollDistansProjects}`,
+         end: `+=${scrollDistanceProj}`,
          pin: true,
          scrub: 1,
          pinSpacing: false,
-         markers: true,
+         // markers: true,
       },
    })
-   projectItems.forEach((el, index) => {
-      tlProjects.to(el, { y: 0 }).to(el, { y: '-100vh', opacity: 0 })
-   })
+
+   tlProjects.to(listrSecProg, { y: -actionTranslateY })
 
    //анимация цифр
    const animateCount = (element, targetValue) => {
@@ -319,7 +341,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
          end: `+=${scrollDistanceOffer}`,
          pin: true,
          scrub: 1,
-         markers: true,
+         // markers: true,
       },
    })
 

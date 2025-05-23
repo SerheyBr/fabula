@@ -25,7 +25,7 @@ if (window.innerWidth <= 1024) {
       const btnBefore = el.querySelector(`#exemple${index + 1}-before`)
       const btnAfter = el.querySelector(`#exemple${index + 1}-after`)
 
-      console.log(btnAfter)
+      // console.log(btnAfter)
       btnBefore.addEventListener('click', (e) => {
          images[0].style.display = 'block'
       })

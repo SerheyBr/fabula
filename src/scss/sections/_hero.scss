@@ -111,6 +111,7 @@
 
    &__text-block {
       max-width: 60%;
+      margin-top: -50px;
    }
 
    &__title {
@@ -303,6 +304,7 @@
          max-width: 90%;
          text-align: center;
          margin-bottom: 64px;
+         margin-top: 0;
       }
       &__title--top-word {
          justify-content: center;
