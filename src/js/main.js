@@ -34,5 +34,3 @@ if (window.innerWidth <= 1024) {
       })
    })
 }
-
-console.log(window.innerHeight, window.innerWidth)

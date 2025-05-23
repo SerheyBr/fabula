@@ -35,8 +35,6 @@ if (window.innerWidth <= 1024) {
    })
 }
 
-console.log(window.innerHeight, window.innerWidth)
-
 document.addEventListener('DOMContentLoaded', (event) => {
    //функция для разделения текста на буквы
    const splitText = (className, newClassName) => {
@@ -262,7 +260,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
    //анимация projects-item
    const sectionProjects = document.querySelector('.projects__wrapper')
-   const skrollDistansProjects = 10000
+   const skrollDistansProjects = 8000
    const projectItems = document.querySelectorAll('.projects-item')
    document.querySelector('.result').style.marginTop =
       skrollDistansProjects + 'px'
@@ -275,7 +273,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
          pin: true,
          scrub: 1,
          pinSpacing: false,
-         // markers: true,
+         markers: true,
       },
    })
    projectItems.forEach((el, index) => {
@@ -310,7 +308,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
    const sectionOffer = document.querySelector('.offer')
    const offerElementsInfo = document.querySelectorAll('.offer-item__info')
    const lottieElements = document.querySelectorAll('.offer-item__img')
-   const scrollDistanceOffer = 7000
+   const scrollDistanceOffer = 4500
    const nextSection = document.querySelector('.we-fabula')
    nextSection.style.marginTop = `${scrollDistanceOffer}px`
 
@@ -321,13 +319,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
          end: `+=${scrollDistanceOffer}`,
          pin: true,
          scrub: 1,
-         // markers: true,
+         markers: true,
       },
    })
 
    tlOffer
-      .to(offerElementsInfo[0], { y: '0' })
-      .to(lottieElements[0], { opacity: 1 })
+      // .to(offerElementsInfo[0], { y: '0' })
+      // .to(lottieElements[0], { opacity: 1 })
       .to({}, { duration: 1 })
       .to(lottieElements[0], { opacity: 0 })
       .to(offerElementsInfo[0], { y: '-50vh', opacity: 0 })

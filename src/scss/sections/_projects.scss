@@ -3,16 +3,18 @@
    padding-top: 700px;
    margin-bottom: 340px;
    // background-color: rgba(0, 255, 255, 0.264);
+
    &__wrapper {
       position: relative;
       height: 100vh;
       overflow: hidden;
-      // background-color: #c8f80670;
    }
 
    &__title {
       position: relative;
       z-index: 1;
+      top: 50%;
+      transform: translateY(-50%);
       backdrop-filter: blur(60.599998474121094px);
       background: rgba(255, 255, 255, 0.1);
       border-radius: 20px;

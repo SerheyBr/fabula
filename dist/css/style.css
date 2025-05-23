@@ -491,7 +491,7 @@ body {
   left: 0;
   z-index: -1;
   width: 100%;
-  height: 85%;
+  height: 60vh;
   background-image: url("../assets/img/Mask group.svg");
   background-position: center;
   background-size: cover;
@@ -2073,6 +2073,7 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   height: 100vh;
+  width: 100%;
 }
 .offer-item__info {
   width: 50%;
@@ -2115,8 +2116,8 @@ body {
   margin-right: 15px;
 }
 .offer-item__img {
-  width: 50%;
-  height: 100%;
+  width: clamp(315px, 100%, 745px);
+  height: 540px;
   opacity: 0;
 }
 @media (max-width: 1024px) {
@@ -2145,6 +2146,16 @@ body {
     padding: 6px 10px;
     font-size: clamp(0.9375rem, 1.5625vw, 1rem);
   }
+}
+
+.offer-item:nth-child(1) .offer-item__info {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.offer-item:nth-child(1) .offer-item__img {
+  opacity: 1;
 }
 
 .we-fabula {
@@ -2565,6 +2576,10 @@ body {
 .projects__title {
   position: relative;
   z-index: 1;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   -webkit-backdrop-filter: blur(60.5999984741px);
   backdrop-filter: blur(60.5999984741px);
   background: rgba(255, 255, 255, 0.1);
@@ -2773,6 +2788,7 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  height: 840px;
 }
 .result__info {
   max-width: 646px;
@@ -2829,6 +2845,7 @@ body {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    height: auto;
   }
   .result__info {
     margin: 0 auto;
@@ -2930,9 +2947,9 @@ body {
   margin-bottom: 3px;
 }
 .result-item__body {
-  -webkit-transform: translateY(-36px);
-  -ms-transform: translateY(-36px);
-  transform: translateY(-36px);
+  -webkit-transform: translateY(-36px) skewY(0);
+  -ms-transform: translateY(-36px) skewY(0);
+  transform: translateY(-36px) skewY(0);
   max-height: 0;
   overflow: hidden;
   opacity: 0;
@@ -2959,14 +2976,15 @@ body {
   margin-bottom: 7px;
 }
 .result-item__img--mobil {
-  border-radius: 13px;
+  border-radius: 23px;
   overflow: hidden;
   width: 400px;
+  height: 150px;
   display: none;
 }
 .result-item__img--mobil img {
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   -webkit-transform: scale(1.1);
@@ -3022,9 +3040,9 @@ body {
   }
 }
 .result-item.active .result-item__body {
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
+  -webkit-transform: translateY(0) scaleY(1);
+  -ms-transform: translateY(0) scaleY(1);
+  transform: translateY(0) scaleY(1);
   opacity: 1;
   max-height: 200px;
 }
