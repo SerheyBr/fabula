@@ -2571,12 +2571,11 @@ body {
   margin-bottom: 340px;
 }
 .projects__wrapper {
-  position: relative;
   height: 100vh;
 }
 .projects__title {
   position: relative;
-  z-index: 1;
+  isolation: isolate;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -2637,6 +2636,7 @@ body {
 }
 
 .projects-item {
+  position: relative;
   max-width: 616px;
   height: 390px;
   width: 100%;
@@ -2652,7 +2652,6 @@ body {
 .projects-item:nth-child(odd) {
   -ms-flex-item-align: end;
   align-self: flex-end;
-  z-index: 1;
 }
 .projects-item__img {
   border-radius: 20px;
