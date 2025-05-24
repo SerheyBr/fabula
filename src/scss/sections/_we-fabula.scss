@@ -2,6 +2,8 @@
    background: linear-gradient(180deg, #fbf5ff 0%, #fbf5ff 100%);
    padding-top: 150px;
    padding-bottom: 450px;
+   position: relative;
+   z-index: 1;
    &__wrapper {
    }
 

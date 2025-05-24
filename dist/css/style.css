@@ -2165,6 +2165,8 @@ body {
   background: linear-gradient(180deg, #fbf5ff 0%, #fbf5ff 100%);
   padding-top: 150px;
   padding-bottom: 450px;
+  position: relative;
+  z-index: 1;
 }
 .we-fabula__title {
   display: -webkit-box;
@@ -2415,6 +2417,7 @@ body {
   position: absolute;
   top: 0;
   left: 50%;
+  z-index: 1;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -2575,6 +2578,7 @@ body {
 }
 .projects__title {
   position: relative;
+  z-index: 1;
   isolation: isolate;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -2636,7 +2640,11 @@ body {
 }
 
 .projects-item {
-  position: relative;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(100vh);
+  -ms-transform: translateY(100vh);
+  transform: translateY(100vh);
   max-width: 616px;
   height: 390px;
   width: 100%;
@@ -2648,10 +2656,12 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  z-index: 0;
 }
 .projects-item:nth-child(odd) {
   -ms-flex-item-align: end;
   align-self: flex-end;
+  z-index: 1;
 }
 .projects-item__img {
   border-radius: 20px;
