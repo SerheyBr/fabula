@@ -29,8 +29,10 @@
    &__list {
       display: flex;
       white-space: nowrap;
-
-      animation: ribbon-list 60s linear infinite;
+      // overflow: hidden;
+      // position: relative;
+      // background-color: red;
+      // animation: ribbon-list 5s linear infinite;
    }
    &__list-item {
       font-family: var(--second-family);
@@ -39,6 +41,7 @@
       color: var(--white);
       display: flex;
       align-items: center;
+      animation: ribbon-list 50s linear infinite;
       span {
          display: block;
          width: 10px;
@@ -57,9 +60,9 @@
 
 @keyframes ribbon-list {
    0% {
-      transform: translateX(0);
+      transform: translateX(-100%);
    }
    100% {
-      transform: translateX(-40%);
+      transform: translateX(+100%);
    }
 }
