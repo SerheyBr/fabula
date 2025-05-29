@@ -2059,6 +2059,8 @@ body {
 }
 .offer__title {
   text-align: center;
+  position: relative;
+  top: 100px;
 }
 .offer__body {
   position: relative;
@@ -2123,8 +2125,11 @@ body {
 }
 .offer-item__img {
   width: clamp(315px, 100%, 745px);
-  height: 540px;
   opacity: 0;
+}
+.offer-item__img img {
+  width: 100%;
+  height: 100%;
 }
 @media (max-width: 1024px) {
   .offer-item {
