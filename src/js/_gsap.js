@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
    //блюр в с рандомной задержкой
    document.querySelectorAll('.we-know__list-item').forEach((el) => {
       gsap.to(el, {
-         filter: () => `blur(${gsap.utils.random(0, 8)}px)`,
+         // filter: () => `blur(${gsap.utils.random(0, 8)}px)`,
          duration: gsap.utils.random(2, 5), // Разная скорость анимации
          repeat: -1, // Бесконечный цикл
          yoyo: true, // Возвращение к изначальному значению
