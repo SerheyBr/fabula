@@ -123,7 +123,12 @@ button {
   position: relative;
   max-width: 1580px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 40px;
+}
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 30px;
+  }
 }
 
 body {
@@ -925,8 +930,8 @@ body {
   transform: rotate(-4deg) translateY(50%);
 }
 .ribbons__element--bg-blur {
-  -webkit-backdrop-filter: blur(39.2999992371px);
-  backdrop-filter: blur(39.2999992371px);
+  position: relative;
+  z-index: -1;
   -webkit-box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.11);
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.11);
   background: rgba(251, 245, 255, 0.2);
