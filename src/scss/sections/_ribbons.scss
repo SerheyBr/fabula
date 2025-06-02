@@ -7,7 +7,8 @@
    align-items: center;
    justify-content: center;
    overflow: hidden;
-   margin-top: -15px;
+   // margin-top: -15px;
+   margin-top: -65px;
    margin-bottom: 60px;
    &__element {
       padding: 30px 0;
@@ -64,5 +65,18 @@
    }
    100% {
       transform: translateX(+100%);
+   }
+}
+
+.ribbons__list-item.revers {
+   animation: ribbon-list-revers 50s linear infinite;
+}
+
+@keyframes ribbon-list-revers {
+   0% {
+      transform: translateX(+100%);
+   }
+   100% {
+      transform: translateX(-100%);
    }
 }

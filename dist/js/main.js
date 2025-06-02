@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
    splitText('.now-imagine__text', 'now-imagine__text--letter')
    splitText('.solution__text', 'solution__text--letter')
 
-   //анимируем плавное заполнение текста
+   // //анимируем плавное заполнение текста
    gsap.to('.now-imagine__text--letter', {
       color: '#FFFFFF', // Меняем цвет на яркий
       stagger: 0.03, // Поочередное появление букв
@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
          pin: true,
          scrub: 1,
          pinSpacing: false,
-         markers: true,
+         // markers: true,
       },
    })
    projectItems.forEach((el, index, arr) => {

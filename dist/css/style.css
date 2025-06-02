@@ -487,15 +487,14 @@ body {
 .hero::after {
   content: "";
   position: absolute;
-  top: -5%;
+  top: -4%;
   left: 0;
   z-index: -1;
   width: 100%;
   height: 100vh;
-  background-image: url("../assets/img/Mask group.svg");
+  background-image: url("../assets/img/mask-new.png");
   background-position: center;
   background-size: cover;
-  border-radius: 100%;
   overflow: hidden;
 }
 .hero__bg {
@@ -906,7 +905,7 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   overflow: hidden;
-  margin-top: -15px;
+  margin-top: -65px;
   margin-bottom: 60px;
 }
 .ribbons__element {
@@ -990,9 +989,35 @@ body {
     transform: translateX(100%);
   }
 }
+.ribbons__list-item.revers {
+  -webkit-animation: ribbon-list-revers 50s linear infinite;
+  animation: ribbon-list-revers 50s linear infinite;
+}
+
+@-webkit-keyframes ribbon-list-revers {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes ribbon-list-revers {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
 .we-know {
   margin-top: -189px;
-  background-image: url("../assets/img/Mask group.svg");
+  background-image: url("../assets/img/mask-new.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1093,6 +1118,8 @@ body {
 }
 .we-know__list-item:nth-child(2) {
   font-size: clamp(1.0625rem, 3.2227vw, 2.0625rem);
+  -webkit-filter: blur(13.8000001907px);
+  filter: blur(13.8000001907px);
   top: 18%;
   right: 23%;
 }
@@ -1108,6 +1135,8 @@ body {
 }
 .we-know__list-item:nth-child(5) {
   font-size: clamp(0.75rem, 2.3438vw, 1.5rem);
+  -webkit-filter: blur(5.8000001907px);
+  filter: blur(5.8000001907px);
   top: 56%;
   right: 11%;
 }
@@ -1118,6 +1147,8 @@ body {
 }
 .we-know__list-item:nth-child(7) {
   font-size: clamp(0.9375rem, 3.0273vw, 1.9375rem);
+  -webkit-filter: blur(13.3000001907px);
+  filter: blur(13.3000001907px);
   bottom: 8%;
   right: 13%;
 }
@@ -1133,6 +1164,8 @@ body {
 }
 .we-know__list-item:nth-child(10) {
   font-size: clamp(0.75rem, 2.3438vw, 1.5rem);
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
   bottom: 11%;
   left: 21%;
 }
@@ -1143,6 +1176,8 @@ body {
 }
 .we-know__list-item:nth-child(12) {
   font-size: clamp(0.875rem, 2.6367vw, 1.6875rem);
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
   bottom: 41%;
   left: 13%;
   display: none;
@@ -1978,8 +2013,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-animation: slider-customers-slider 10s linear infinite;
-  animation: slider-customers-slider 10s linear infinite;
+  -webkit-animation: slider-customers-slider 20s linear infinite;
+  animation: slider-customers-slider 20s linear infinite;
 }
 .slider-customers-slider__slide {
   min-width: 245px;
@@ -2584,6 +2619,10 @@ body {
 }
 .projects__wrapper {
   height: 100vh;
+  background-image: url("../assets/img/mask-new.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .projects__title {
   position: relative;
