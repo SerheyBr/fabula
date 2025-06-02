@@ -143,6 +143,10 @@
          &::after {
             display: none;
          }
+         // circle {
+         //    opacity: 1;
+         //    stroke: rgba(255, 255, 255, 0.05);
+         // }
       }
       &__procent--right {
          bottom: -80px;
@@ -150,6 +154,10 @@
       }
       &__procent--left {
          bottom: -80px;
+      }
+      .circle-bg {
+         opacity: 1;
+         stroke: rgb(52 51 51);
       }
    }
    @media (max-width: 1024px) {

@@ -334,7 +334,7 @@ body {
 
 .hero-contact-us {
   position: fixed;
-  bottom: 0;
+  bottom: 2%;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
@@ -478,7 +478,7 @@ body {
 
 .btn-scroll {
   position: relative;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
 }
 .hero {
   margin-bottom: 23px;
@@ -1178,9 +1178,8 @@ body {
   font-size: clamp(0.875rem, 2.6367vw, 1.6875rem);
   -webkit-filter: blur(8px);
   filter: blur(8px);
-  bottom: 41%;
+  bottom: 36%;
   left: 13%;
-  display: none;
 }
 .we-know__list-item:nth-child(13) {
   font-size: clamp(0.75rem, 2.3438vw, 1.5rem);
@@ -1885,6 +1884,10 @@ body {
   }
   .you-need-facts__procent--left {
     bottom: -80px;
+  }
+  .you-need-facts .circle-bg {
+    opacity: 1;
+    stroke: rgb(52, 51, 51);
   }
 }
 @media (max-width: 1024px) {
@@ -3153,6 +3156,7 @@ body {
   width: 100%;
   min-height: 537px;
   padding: 0 30px;
+  cursor: pointer;
 }
 .give-floor-item__bg {
   position: absolute;
