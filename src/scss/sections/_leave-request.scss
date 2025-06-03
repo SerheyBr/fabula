@@ -4,7 +4,11 @@
       position: relative;
       overflow: hidden;
       padding: 145px 20px;
-      background-color: #16042a;
+      // background-color: #16042a;
+      background-image: url('/assets/img/bg-leave-request.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
       width: 100%;
       border-radius: 30px;
       display: flex;
@@ -129,6 +133,7 @@
       &__box {
          padding: 100px 20px;
          margin-bottom: 100px;
+         background-image: url('/assets/img/bg-leave-request-mobil.png');
       }
       &__subtitle {
          display: none;
@@ -156,6 +161,11 @@
    width: 100%;
    height: 100%;
    overflow: hidden;
+   display: none;
+   // background-image: url('/assets/img/bg-leave-request.png');
+   // background-position: center;
+   // background-repeat: no-repeat;
+   // background-size: cover;
    // z-index: -1;
    &__item {
       position: absolute;
