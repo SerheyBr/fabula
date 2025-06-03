@@ -40,15 +40,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
    gsap.to('.hero-contact-us', {
       scrollTrigger: {
          trigger: '.btn-scroll', // Когда доскроллим до этого блока
-         start: 'bottom bottom', // Когда верхняя часть блока достигнет центра экрана
-         end: 'top top',
+         start: 'bottom 98%', // Когда верхняя часть блока достигнет центра экрана
+         // end: 'top top',
+         scrub: 1,
          onEnter: () =>
             document.querySelector('.hero-contact-us').classList.add('sticky'),
          onLeaveBack: () =>
             document
                .querySelector('.hero-contact-us')
                .classList.remove('sticky'),
-         // markers: false,
+         // markers: true,
       },
    })
 

@@ -210,13 +210,15 @@
 
 .hero-contact-us.sticky {
    position: absolute;
+   bottom: 0%;
 }
 
 .btn-scroll {
    position: relative;
    margin-bottom: 120px;
    // padding-bottom: 102px;
-   // background-color: rgba(255, 0, 0, 0.403);
+   // background-color: rgba(0, 128, 0, 0.245);
+   // padding-bottom: 104px;
    @media (max-width: 500px) {
       // padding-bottom: 60px;
    }

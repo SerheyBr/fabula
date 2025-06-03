@@ -34,3 +34,9 @@ if (window.innerWidth <= 1024) {
       })
    })
 }
+
+// расчет высоты фиксированной кнопки и padding-bottom у секции активности кнопки
+const contactUsBtn = document.querySelector('.hero-contact-us')
+const contactUsBtnScrollZone = document.querySelector('.btn-scroll')
+const contactUsBtnHeight = contactUsBtn.clientHeight
+contactUsBtnScrollZone.style.paddingBottom = `${contactUsBtnHeight + 20}px`

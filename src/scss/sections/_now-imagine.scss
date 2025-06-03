@@ -1,17 +1,23 @@
 .now-imagine {
    position: relative;
    width: 100%;
-   margin-bottom: 80px;
+   // margin-bottom: 80px;
+   height: 230vh;
+   // background-color: rgba(255, 0, 0, 0.323);
+   overflow: hidden;
    &__bg {
-      min-height: 250vh;
+      // min-height: 250vh;
+      height: 100%;
       position: absolute;
       width: 100vw;
-      overflow-x: hidden;
+      // overflow-x: hidden;
       top: 0;
       left: 0;
       z-index: -1;
+      // background-color: green;
    }
    &__bg-clouds {
+      // background-color: rgba(255, 0, 0, 0.395);
       position: absolute;
       top: 0;
       left: 0;
@@ -41,6 +47,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      // background-color: red;
    }
    &__body {
       text-align: center;
@@ -59,6 +66,7 @@
       color: #8e8e8e89;
    }
    @media (max-width: 550px) {
+      height: 175vh;
       &__bg-clouds {
          min-height: 70vh;
       }
@@ -297,6 +305,7 @@
    }
 }
 .now-imagine-blob {
+   background-color: red;
    &__rope {
       position: absolute;
       top: 0;
