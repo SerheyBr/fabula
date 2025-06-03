@@ -487,6 +487,7 @@ body {
 }
 .hero {
   min-height: calc(100vh - var(--header-height));
+  position: relative;
 }
 .hero::after {
   content: "";
@@ -504,8 +505,7 @@ body {
 .hero__bg {
   position: absolute;
   width: 100vw;
-  height: 150vh;
-  overflow-x: hidden;
+  height: 100%;
   z-index: -1;
   top: calc(0px - var(--header-height) - 30px);
   left: 0;
@@ -561,13 +561,17 @@ body {
   bottom: 24%;
   left: 40%;
 }
+.hero__bg-stain svg {
+  width: 100%;
+  height: 100%;
+}
 .hero__bg-stain--1 {
-  bottom: 0%;
+  bottom: -50%;
   left: 0%;
 }
 .hero__bg-stain--2 {
-  bottom: -10%;
-  right: -30%;
+  bottom: -50%;
+  right: 0;
 }
 .hero__wrapper {
   display: -webkit-box;
