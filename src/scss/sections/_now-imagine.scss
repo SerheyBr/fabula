@@ -2,27 +2,31 @@
    position: relative;
    width: 100%;
    // margin-bottom: 80px;
-   height: 230vh;
+   // height: 230vh;
    // background-color: rgba(255, 0, 0, 0.323);
-   overflow: hidden;
+   // overflow: hidden;
    &__bg {
       // min-height: 250vh;
-      height: 100%;
-      position: absolute;
-      width: 100vw;
+      // height: 100%;
+      position: relative;
+      width: 100%;
       // overflow-x: hidden;
       top: 0;
       left: 0;
       z-index: -1;
-      // background-color: green;
+      // background-color: rgba(128, 122, 0, 0.319);
    }
    &__bg-clouds {
       // background-color: rgba(255, 0, 0, 0.395);
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
-      min-width: 100%;
-      min-height: 100vh;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      margin-bottom: 220px;
+      // margin-bottom: 120px;
+      // background-color: green;
    }
    &__bg-stars {
       position: absolute;
@@ -33,15 +37,19 @@
       min-height: 100vh;
    }
    &__bg-blob {
-      position: absolute;
+      // background-color: green;
+      position: relative;
       z-index: -1;
       bottom: 0;
       left: 50%;
-      width: 34%;
+      // width: 34%;
       width: clamp(348px, 93%, 652px);
-      transform: translate(-51%, 129%);
+      transform: translate(-51%, 0);
    }
    &__wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100vh;
       display: flex;
@@ -65,20 +73,24 @@
       text-align: center;
       color: #8e8e8e89;
    }
-   @media (max-width: 550px) {
-      height: 175vh;
+   @media (max-width: 1400px) {
       &__bg-clouds {
-         min-height: 70vh;
+         margin-bottom: 100px;
+      }
+   }
+   @media (max-width: 700px) {
+      &__bg-clouds {
+         margin-bottom: 70px;
+      }
+   }
+   @media (max-width: 450px) {
+      &__bg-clouds {
+         height: 70vh;
       }
       &__wrapper {
          height: 70vh;
       }
    }
-   // @media (max-width: 376px) {
-   //    &__bg-clouds {
-   //       min-height: 94vh;
-   //    }
-   // }
 }
 
 .now-imagine-clouds {
@@ -305,15 +317,20 @@
    }
 }
 .now-imagine-blob {
-   background-color: red;
    &__rope {
       position: absolute;
-      top: 0;
-      left: 50%;
+      z-index: -1;
+      top: 13px;
+      left: 53%;
       overflow: hidden;
       transform: translate(-50%, -100%);
-      width: clamp(330px, 66vw, 1267px);
+      width: 80vw;
       height: clamp(192px, 28vw, 480px);
+      background-image: url('/assets/img/rope.svg');
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: contain;
+      // background-color: red;
    }
    &__circle {
       position: absolute;
@@ -324,10 +341,27 @@
       height: 197%;
       border-radius: 50%;
       border: 1px solid rgb(255, 255, 255);
+      display: none;
    }
-   @media (max-width: 1024px) {
+   // @media (max-width: 1024px) {
+   //    &__rope {
+   //       height: clamp(192px, 43vw, 315px);
+   //    }
+   // }
+   @media (max-width: 700px) {
       &__rope {
-         height: clamp(192px, 43vw, 315px);
+         // position: absolute;
+         // z-index: -1;
+         // top: 13px;
+         // left: 53%;
+         // overflow: hidden;
+         // transform: translate(-50%, -100%);
+         // width: 80vw;
+         // height: clamp(192px, 28vw, 480px);
+         background-image: url('/assets/img/rope-mobil.svg');
+         // background-position: center bottom;
+         // background-repeat: no-repeat;
+         // background-size: contain;
       }
    }
 }
