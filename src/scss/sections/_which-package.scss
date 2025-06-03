@@ -1,7 +1,13 @@
 .which-package {
    margin-bottom: 265px;
-   @media (max-width: 770px) {
-      margin-bottom: 100px;
+   // @media (max-width: 770px) {
+   //    margin-bottom: 100px;
+   // }
+   @media (max-width: 1500px) {
+      display: none;
+   }
+   @media (max-width: 1024px) {
+      display: block;
    }
 }
 
@@ -77,6 +83,11 @@
    &__btn {
       white-space: nowrap;
       padding: 15px 30px;
+   }
+   @media (max-width: 1500px) {
+      height: 100%;
+      display: flex;
+      align-items: center;
    }
    @media (max-width: 700px) {
       padding: 30px;

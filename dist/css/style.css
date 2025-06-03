@@ -2210,7 +2210,6 @@ body {
   }
   .offer-item__img {
     width: 100%;
-    max-height: 228px;
   }
   .offer-item__text {
     font-size: clamp(1rem, 1.9531vw, 1.25rem);
@@ -3702,20 +3701,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 0 -15px;
-}
-@media (max-width: 1500px) {
-  .fixed-price__columns {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    gap: 25px;
-    margin: 0;
-  }
 }
 @media (max-width: 770px) {
   .fixed-price__title {
@@ -3726,6 +3714,9 @@ body {
 .fixed-price-item {
   width: 33.3333333333%;
   padding: 0 15px;
+}
+.fixed-price-item--dop {
+  display: none;
 }
 .fixed-price-item__wrapper {
   background: rgba(255, 255, 255, 0.1);
@@ -3890,13 +3881,22 @@ body {
 }
 @media (max-width: 1500px) {
   .fixed-price-item {
-    padding: 0;
-    width: 70%;
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  .fixed-price-item--dop {
+    display: block;
+  }
+  .fixed-price-item__list {
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 1024px) {
   .fixed-price-item {
     width: 100%;
+  }
+  .fixed-price-item--dop {
+    display: none;
   }
 }
 @media (max-width: 700px) {
@@ -3921,9 +3921,14 @@ body {
 .which-package {
   margin-bottom: 265px;
 }
-@media (max-width: 770px) {
+@media (max-width: 1500px) {
   .which-package {
-    margin-bottom: 100px;
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .which-package {
+    display: block;
   }
 }
 
@@ -3995,6 +4000,17 @@ body {
 .which-package-box__btn {
   white-space: nowrap;
   padding: 15px 30px;
+}
+@media (max-width: 1500px) {
+  .which-package-box {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
 }
 @media (max-width: 700px) {
   .which-package-box {

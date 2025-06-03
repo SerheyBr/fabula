@@ -162,23 +162,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
    })
 
    //анимация мушек
-   // function moveRandomly(spot) {
-   //    gsap.to(spot, {
-   //       x: `+=${gsap.utils.random(-100, 100)}`, // Случайное смещение по X
-   //       y: `+=${gsap.utils.random(-100, 100)}`, // Случайное смещение по Y
-   //       rotation: gsap.utils.random(-180, 180), // Случайный поворот
-   //       duration: gsap.utils.random(5, 10), // Случайная скорость
-   //       ease: 'power1.inOut',
-   //       onComplete: () => moveRandomly(spot), // Повторяем движение с новыми параметрами
-   //    })
-   // }
-   // const arraySpot = [
-   //    ...document.querySelectorAll('.projects-bg__el'),
-   //    ...document.querySelectorAll('.hero__bg-crcl'),
-   // ]
+   function moveRandomly(spot) {
+      gsap.to(spot, {
+         x: `+=${gsap.utils.random(-100, 100)}`, // Случайное смещение по X
+         y: `+=${gsap.utils.random(-100, 100)}`, // Случайное смещение по Y
+         rotation: gsap.utils.random(-180, 180), // Случайный поворот
+         duration: gsap.utils.random(5, 10), // Случайная скорость
+         ease: 'power1.inOut',
+         onComplete: () => moveRandomly(spot), // Повторяем движение с новыми параметрами
+      })
+   }
+   const arraySpot = [
+      ...document.querySelectorAll('.projects-bg__el'),
+      ...document.querySelectorAll('.hero__bg-crcl'),
+   ]
 
-   // document
-   // arraySpot.forEach((spot) => moveRandomly(spot))
+   document
+   arraySpot.forEach((spot) => moveRandomly(spot))
 
    //анимация облаков
    document.querySelectorAll('nom-imagine-star')
