@@ -97,19 +97,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
    })
 
    //блюр в с рандомной задержкой
-   document.querySelectorAll('.we-know__list-item').forEach((el) => {
-      gsap.to(el, {
-         // filter: () => `blur(${gsap.utils.random(0, 8)}px)`,
-         duration: gsap.utils.random(2, 5), // Разная скорость анимации
-         repeat: -1, // Бесконечный цикл
-         yoyo: true, // Возвращение к изначальному значению
-         stagger: {
-            // Рандомное время старта для каждого элемента
-            each: gsap.utils.random(0, 1),
-            repeatRefresh: true, // Генерирует новое значение для каждого повтора
-         },
-      })
-   })
+   // document.querySelectorAll('.we-know__list-item').forEach((el) => {
+   //    gsap.to(el, {
+   //       // filter: () => `blur(${gsap.utils.random(0, 8)}px)`,
+   //       duration: gsap.utils.random(2, 5), // Разная скорость анимации
+   //       repeat: -1, // Бесконечный цикл
+   //       yoyo: true, // Возвращение к изначальному значению
+   //       stagger: {
+   //          // Рандомное время старта для каждого элемента
+   //          each: gsap.utils.random(0, 1),
+   //          repeatRefresh: true, // Генерирует новое значение для каждого повтора
+   //       },
+   //    })
+   // })
 
    //запуск анимации заполнения круговой индикатор прогресса
    gsap.from('.circle-progres', {
@@ -164,16 +164,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
    //анимация мушек
    function moveRandomly(spot) {
       gsap.to(spot, {
-         x: `+=${gsap.utils.random(-100, 100)}`, // Случайное смещение по X
-         y: `+=${gsap.utils.random(-100, 100)}`, // Случайное смещение по Y
-         rotation: gsap.utils.random(-180, 180), // Случайный поворот
-         duration: gsap.utils.random(5, 10), // Случайная скорость
+         x: `+=${Math.floor(gsap.utils.random(-90, 90))}`, // Случайное смещение по X
+         y: `+=${Math.floor(gsap.utils.random(-90, 90))}`, // Случайное смещение по Y
+         // rotation: gsap.utils.random(-180, 180), // Случайный поворот
+         duration: Math.floor(gsap.utils.random(1, 5)), // Случайная скорость
          ease: 'power1.inOut',
          onComplete: () => moveRandomly(spot), // Повторяем движение с новыми параметрами
       })
    }
    const arraySpot = [
-      ...document.querySelectorAll('.projects-bg__el'),
+      ...document.querySelectorAll('.projects-bg__el--animation'),
       ...document.querySelectorAll('.hero__bg-crcl'),
    ]
 
@@ -248,6 +248,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
       )
       .add(animationCloudes(cloudsLeftBottom, -300, -200), '<0.7')
       .add(animationCloudes(cloudsRightBottom, 350, 250), '<0.1')
+
+   ////анимация облаков START TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST
+
+   ////анимация облаков END TESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTESTTEST
 
    //анимация звезд
    document.querySelectorAll('.nom-imagine-star').forEach((el) => {
