@@ -22,33 +22,57 @@
       position: relative;
       max-width: 358px;
       mix-blend-mode: color-dodge;
-      &::after {
-         content: '';
-         position: absolute;
-         top: 17px;
-         left: 20px;
-         width: 34px;
-         height: 82px;
-         background-image: url('../assets/img/lighthing.svg');
-         background-position: center;
-         background-size: cover;
-         background-repeat: no-repeat;
-         transform: rotate(-35deg);
-      }
-      &::before {
-         content: '';
-         position: absolute;
-         top: 17px;
-         right: 25px;
-         width: 34px;
-         height: 82px;
+      // &::after {
+      //    content: '';
+      //    position: absolute;
+      //    top: 17px;
+      //    left: 20px;
+      //    width: 34px;
+      //    height: 82px;
+      //    background-image: url('../assets/img/lighthing.svg');
+      //    background-position: center;
+      //    background-size: cover;
+      //    background-repeat: no-repeat;
+      //    transform: rotate(-35deg);
+      // }
+      // &::before {
+      //    content: '';
+      //    position: absolute;
+      //    top: 17px;
+      //    right: 25px;
+      //    width: 34px;
+      //    height: 82px;
 
-         background-image: url('../assets/img/lighthing.svg');
-         background-position: center;
-         background-size: cover;
-         background-repeat: no-repeat;
-         transform: rotate(35deg);
-      }
+      //    background-image: url('../assets/img/lighthing.svg');
+      //    background-position: center;
+      //    background-size: cover;
+      //    background-repeat: no-repeat;
+      //    transform: rotate(35deg);
+      // }
+   }
+   &__zipper--left {
+      position: absolute;
+      top: 17px;
+      left: 20px;
+      width: 34px;
+      height: 82px;
+      background-image: url('../assets/img/lighthing.svg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform: rotate(-35deg);
+   }
+   &__zipper--right {
+      position: absolute;
+      top: 17px;
+      right: 25px;
+      width: 34px;
+      height: 82px;
+      background-image: url('../assets/img/lighthing.svg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform: rotate(35deg);
    }
 
    &__title {
@@ -199,23 +223,24 @@
          }
       }
    }
+
    @media (max-width: 1024px) {
       &__img {
          img {
             max-width: 250px;
          }
-         &::after {
-            top: -25px;
-            left: 6px;
-            width: clamp(24px, 3.3203vw, 34px);
-            height: clamp(61px, 8.0078vw, 82px);
-         }
-         &::before {
-            top: -21px;
-            right: 10px;
-            width: clamp(24px, 3.3203vw, 34px);
-            height: clamp(61px, 8.0078vw, 82px);
-         }
+      }
+      &__zipper--left {
+         top: -25px;
+         left: 6px;
+         width: clamp(24px, 3.3203vw, 34px);
+         height: clamp(61px, 8.0078vw, 82px);
+      }
+      &__zipper--right {
+         top: -21px;
+         right: 10px;
+         width: clamp(24px, 3.3203vw, 34px);
+         height: clamp(61px, 8.0078vw, 82px);
       }
       &__title {
          left: -54%;
@@ -246,14 +271,14 @@
          img {
             max-width: 180px;
          }
-         &::after {
-            top: -12px;
-            left: 0px;
-         }
-         &::before {
-            top: -6px;
-            right: 6px;
-         }
+      }
+      &__zipper--left {
+         top: -12px;
+         left: 0px;
+      }
+      &__zipper--right {
+         top: -6px;
+         right: 6px;
       }
       &__title {
          font-size: 30px;

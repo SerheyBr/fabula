@@ -27,6 +27,17 @@ a {
    display: block;
 }
 
+a,
+button,
+input,
+textarea,
+select,
+div,
+span {
+   outline: none !important;
+   -webkit-tap-highlight-color: transparent; /* Убирает подсветку при тапе на мобильных */
+}
+
 button,
 input,
 textarea {
