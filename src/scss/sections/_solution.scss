@@ -29,6 +29,7 @@
 
    &__text {
       max-width: 1230px;
+      width: 90%;
       font-family: var(--second-family);
       font-weight: 600;
       font-size: clamp(1.25rem, 3.9063vw, 2.5rem);
@@ -44,5 +45,8 @@
    }
    @media (max-width: 431px) {
       margin-top: -220px;
+   }
+   @media (max-width: 400px) {
+      margin-top: -200px;
    }
 }

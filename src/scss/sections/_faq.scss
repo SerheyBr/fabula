@@ -27,6 +27,7 @@
    }
 }
 .faq-item {
+   cursor: pointer;
    border-top: 1px solid #000;
 
    &:last-child {
@@ -64,7 +65,7 @@
       line-height: 120%;
 
       transform: translate(0, -200%);
-      height: 0;
+      max-height: 0;
       position: relative;
       z-index: -1;
       opacity: 0;
@@ -82,7 +83,8 @@
 
 .faq-item.active .faq-item__text {
    transform: translate(0, 0);
-   height: auto;
+   // height: auto;
+   max-height: 1000px;
    position: relative;
    z-index: 1;
    opacity: 1;

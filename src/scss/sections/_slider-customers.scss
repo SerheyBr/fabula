@@ -37,6 +37,9 @@
       position: relative;
       z-index: -1;
    }
+   @media (max-width: 1024px) {
+      margin-bottom: 100px;
+   }
 }
 
 .slider-customers-item {
@@ -72,6 +75,17 @@
       text-align: center;
       line-height: 120%;
       color: rgba(255, 255, 255, 0.64);
+   }
+   @media (max-width: 1024px) {
+      padding: 13px 35px;
+      &__title {
+         margin-bottom: 7px;
+         line-height: 120%;
+      }
+      &__num {
+         margin-bottom: 7px;
+         line-height: 120%;
+      }
    }
    @media (max-width: 376px) {
       // min-width: 170px;

@@ -9,6 +9,7 @@
 
    &__title {
       display: flex;
+      align-items: center;
       margin: 0 auto;
       max-width: max-content;
       font-family: var(--font3-2);
@@ -48,7 +49,7 @@
          margin-bottom: 24px;
       }
       &__title {
-         font-size: clamp(1.875rem, 9.1429vw, 4rem);
+         font-size: clamp(30px, 7vw, 64px);
          a {
             width: clamp(89px, 27vw, 189px);
          }

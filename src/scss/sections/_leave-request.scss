@@ -152,6 +152,22 @@
          margin-bottom: 20px;
       }
    }
+   @media (max-width: 480px) {
+      &__btn {
+         font-size: 16px;
+         line-height: 130%;
+      }
+      &__input {
+         input {
+            font-size: 16px;
+            line-height: 130%;
+         }
+         input::placeholder {
+            font-size: 16px;
+            line-height: 130%;
+         }
+      }
+   }
 }
 
 .leave-request-bg {

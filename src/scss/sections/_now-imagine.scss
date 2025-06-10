@@ -60,6 +60,7 @@
    &__body {
       text-align: center;
       max-width: 1260px;
+      width: 80%;
    }
    &__title {
       margin-bottom: 16px;
@@ -88,6 +89,11 @@
          height: 70vh;
       }
       &__wrapper {
+         height: 70vh;
+      }
+
+      &__bg-stars {
+         min-height: auto;
          height: 70vh;
       }
    }
@@ -276,28 +282,39 @@
    }
    @media (max-width: 1024px) {
       &__1 {
-         top: 32vw;
+         top: 38vw;
          left: 9vw;
+         // background-color: yellow;
       }
       &__4 {
-         top: 51vw;
-         right: 9vw;
+         top: auto;
+         bottom: 2vh;
+         right: 49vw;
+         // background-color: yellow;
       }
       &__5 {
          bottom: 74vw;
          right: 5vw;
+         // background-color: yellow;
       }
       &__6 {
-         bottom: 45vw;
-         right: 38vw;
+         bottom: 24vh;
+         right: 11vw;
+         // background-color: yellow;
+      }
+      &__7 {
+         bottom: 9vh;
+         left: 36vw;
       }
       &__8 {
-         bottom: 60vw;
+         bottom: 37vh;
          left: 3vw;
+         // background-color: yellow;
       }
       &__9 {
-         bottom: 28vw;
+         bottom: 21vh;
          left: 23vw;
+         // background-color: yellow;
       }
    }
 }

@@ -261,6 +261,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
       start: 'top 70%', // когда верх секции достигнет 70% окна
       once: true, // запустится один раз
       // markers: true,
+      // delay: 1,
       onEnter: () => {
          activeitItemFromResultList()
       },
