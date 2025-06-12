@@ -13,7 +13,9 @@
       flex-direction: column;
       margin-right: 20px;
    }
-
+   &__info-content {
+      margin-top: auto;
+   }
    &__title {
       font-family: var(--font3-2);
       font-weight: 600;

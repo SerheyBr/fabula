@@ -3122,6 +3122,9 @@ body {
   flex-direction: column;
   margin-right: 20px;
 }
+.result__info-content {
+  margin-top: auto;
+}
 .result__title {
   font-family: var(--font3-2);
   font-weight: 600;
