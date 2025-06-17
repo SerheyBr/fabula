@@ -45,6 +45,20 @@
       // width: 34%;
       width: clamp(348px, 93%, 652px);
       transform: translate(-51%, 0);
+      // img {
+      //    position: absolute;
+      //    top: 0;
+      //    left: 0;
+      //    border: 2px solid red;
+      // }
+   }
+   &__bg-blob--on {
+      opacity: 0;
+   }
+   &__bg-blob--off {
+      position: absolute;
+      top: 0;
+      left: 0;
    }
    &__wrapper {
       position: absolute;
@@ -343,7 +357,7 @@
       transform: translate(-50%, -100%);
       width: 80vw;
       height: clamp(192px, 28vw, 480px);
-      background-image: url('../assets/img/rope.svg');
+      background-image: url('../assets/img/rope2.svg');
       background-position: center bottom;
       background-repeat: no-repeat;
       background-size: contain;

@@ -6,11 +6,16 @@
    z-index: 20;
    max-width: 416px;
    width: 100%;
-   backdrop-filter: blur(25.799999237060547px);
+   // backdrop-filter: blur(25.799999237060547px);
    background: rgba(255, 255, 255, 0.08);
    border-radius: 70px;
    padding: 20px 36px;
 
+   background-color: rgba(20, 20, 20, 0.45);
+   backdrop-filter: blur(20px);
+   -webkit-backdrop-filter: blur(20px);
+   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+   color: #fff;
    &__wrapper {
       width: 100%;
       display: flex;

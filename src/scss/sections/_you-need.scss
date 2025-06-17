@@ -75,7 +75,7 @@
    &__subtitle {
       font-family: var(--font-family);
       font-weight: 400;
-      font-size: clamp(0.9375rem, 1.25vw, 1.5rem);
+      font-size: clamp(0.9375rem, 2vw, 1.5rem);
       text-align: center;
       color: #837d8a;
    }
@@ -171,7 +171,7 @@
    }
    @media (max-width: 1120px) {
       &__text {
-         font-size: clamp(1rem, 1.6667vw, 2rem);
+         font-size: clamp(1rem, 2vw, 2rem);
       }
       &__title {
          width: clamp(122px, 20.4583vw, 220px);

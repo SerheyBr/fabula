@@ -308,6 +308,7 @@
       }
    }
    @media (max-width: 1024px) {
+      height: auto;
       &__body {
          height: auto;
       }
@@ -335,7 +336,8 @@
          align-self: auto;
       }
       &__video {
-         width: clamp(315px, 27.7vw, 532px);
+         // width: clamp(315px, 27.7vw, 532px);
+         width: clamp(315px, 51vw, 532px);
          height: clamp(203px, 17.8vw, 342px);
          margin-bottom: 40px;
       }

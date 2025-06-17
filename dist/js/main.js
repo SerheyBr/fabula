@@ -572,6 +572,47 @@ document.addEventListener('DOMContentLoaded', (event) => {
          },
          '-=1',
       )
+
+   // анимация лампочки вкл выкл
+   const blobOn = document.querySelector('.now-imagine__bg-blob--on')
+   const blobOff = document.querySelector('.now-imagine__bg-blob--off')
+
+   const blobTl = gsap.timeline({
+      scrollTrigger: {
+         trigger: '.now-imagine__bg-blob--on',
+         start: 'center bottom',
+      },
+   })
+   blobTl
+      .to(blobOn, {
+         opacity: 0.4,
+         duration: 0.1,
+         delay: 0.5,
+      })
+      .to(blobOn, {
+         opacity: 0,
+         duration: 0.1,
+      })
+      .to(blobOn, {
+         opacity: 0.4,
+         duration: 0.1,
+      })
+      .to(blobOn, {
+         opacity: 0,
+         duration: 0.1,
+      })
+      .to(blobOn, {
+         opacity: 0.4,
+         duration: 0.1,
+      })
+      .to(blobOn, {
+         opacity: 0,
+         duration: 0.1,
+      })
+      .to(blobOn, {
+         opacity: 1,
+         duration: 1,
+      })
 })
 
 //проверка работы слайдера

@@ -353,11 +353,15 @@ body {
   z-index: 20;
   max-width: 416px;
   width: 100%;
-  -webkit-backdrop-filter: blur(25.7999992371px);
-  backdrop-filter: blur(25.7999992371px);
   background: rgba(255, 255, 255, 0.08);
   border-radius: 70px;
   padding: 20px 36px;
+  background-color: rgba(20, 20, 20, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+  color: #fff;
 }
 .hero-contact-us__wrapper {
   width: 100%;
@@ -821,6 +825,9 @@ body {
   }
 }
 @media (max-width: 1024px) {
+  .hero {
+    height: auto;
+  }
   .hero__body {
     height: auto;
   }
@@ -863,7 +870,7 @@ body {
     align-self: auto;
   }
   .hero__video {
-    width: clamp(315px, 27.7vw, 532px);
+    width: clamp(315px, 51vw, 532px);
     height: clamp(203px, 17.8vw, 342px);
     margin-bottom: 40px;
   }
@@ -1150,8 +1157,8 @@ body {
 }
 .we-know__list-item:nth-child(2) {
   font-size: clamp(1.0625rem, 3.2227vw, 2.0625rem);
-  -webkit-filter: blur(13.8000001907px);
-  filter: blur(13.8000001907px);
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
   top: 18%;
   right: 23%;
 }
@@ -1167,8 +1174,8 @@ body {
 }
 .we-know__list-item:nth-child(5) {
   font-size: clamp(0.75rem, 2.3438vw, 1.5rem);
-  -webkit-filter: blur(5.8000001907px);
-  filter: blur(5.8000001907px);
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
   top: 56%;
   right: 11%;
 }
@@ -1179,8 +1186,8 @@ body {
 }
 .we-know__list-item:nth-child(7) {
   font-size: clamp(0.9375rem, 3.0273vw, 1.9375rem);
-  -webkit-filter: blur(13.3000001907px);
-  filter: blur(13.3000001907px);
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
   bottom: 8%;
   right: 13%;
 }
@@ -1196,8 +1203,8 @@ body {
 }
 .we-know__list-item:nth-child(10) {
   font-size: clamp(0.75rem, 2.3438vw, 1.5rem);
-  -webkit-filter: blur(8px);
-  filter: blur(8px);
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
   bottom: 11%;
   left: 21%;
 }
@@ -1208,8 +1215,8 @@ body {
 }
 .we-know__list-item:nth-child(12) {
   font-size: clamp(0.875rem, 2.6367vw, 1.6875rem);
-  -webkit-filter: blur(8px);
-  filter: blur(8px);
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
   bottom: 36%;
   left: 13%;
 }
@@ -1246,6 +1253,12 @@ body {
   }
 }
 @media (max-width: 1024px) {
+  .we-know {
+    height: 750px;
+  }
+  .we-know__wrapper {
+    height: 750px;
+  }
   .we-know__img img {
     max-width: 250px;
   }
@@ -1285,6 +1298,10 @@ body {
   .we-know {
     margin-top: -90px;
     margin-bottom: 50px;
+    height: 475px;
+  }
+  .we-know__wrapper {
+    height: 475px;
   }
   .we-know__img img {
     max-width: 180px;
@@ -1311,140 +1328,88 @@ body {
     font-size: 30px;
     white-space: wrap;
   }
-  .we-know__list-item {
+  .we-know__list-item:nth-child(6) {
     max-width: 180px;
   }
-  .we-know__list-item:nth-child(1) {
-    top: 8%;
-  }
-  .we-know__list-item:nth-child(2) {
-    top: 14%;
-  }
-  .we-know__list-item:nth-child(3) {
-    top: 20%;
-  }
-  .we-know__list-item:nth-child(4) {
-    max-width: 110px;
-    top: 77%;
-  }
-  .we-know__list-item:nth-child(5) {
-    top: 73%;
-  }
-  .we-know__list-item:nth-child(6) {
-    top: 74%;
-    right: 37%;
-  }
-  .we-know__list-item:nth-child(7) {
-    bottom: 7%;
-    right: 54%;
-  }
-  .we-know__list-item:nth-child(8) {
-    bottom: 40%;
-    right: 0%;
-  }
-  .we-know__list-item:nth-child(9) {
-    bottom: 13%;
-    left: 33%;
-  }
-  .we-know__list-item:nth-child(10) {
-    bottom: 52%;
-    left: 0%;
-    max-width: 110px;
-    line-height: 150%;
-  }
   .we-know__list-item:nth-child(11) {
-    bottom: 25%;
-  }
-  .we-know__list-item:nth-child(12) {
-    bottom: 34%;
-    left: 0;
+    max-width: 180px;
   }
   .we-know__list-item:nth-child(13) {
-    top: 29%;
-  }
-  .we-know__list-item:nth-child(14) {
-    top: 38%;
-    left: 72%;
+    max-width: 180px;
   }
 }
 @media (max-width: 480px) {
-  .we-know {
-    height: 80vh;
-  }
-  .we-know__wrapper {
-    height: 80vh;
-  }
   .we-know__list-item:nth-child(1) {
     top: 0;
-    right: 6vw;
+    right: 25px;
   }
   .we-know__list-item:nth-child(2) {
-    top: 6vh;
-    right: 17vw;
+    top: 33px;
+    right: 62px;
     max-width: 100%;
   }
   .we-know__list-item:nth-child(3) {
-    top: 31vh;
-    right: 5vh;
+    top: 146px;
+    right: 10px;
     max-width: 65px;
   }
   .we-know__list-item:nth-child(4) {
-    top: 9vh;
-    right: 6vw;
+    top: 66px;
+    right: 17px;
   }
   .we-know__list-item:nth-child(5) {
     top: auto;
-    bottom: 21vh;
-    right: 12vw;
+    bottom: 42px;
+    right: 12px;
   }
   .we-know__list-item:nth-child(6) {
     top: auto;
-    bottom: 10vh;
-    right: 5vw;
+    bottom: 81px;
+    right: 10px;
     max-width: 150px;
   }
   .we-know__list-item:nth-child(7) {
     bottom: auto;
-    top: 38vh;
+    top: 187px;
     max-width: 100px;
-    right: 2vw;
+    right: 1px;
   }
   .we-know__list-item:nth-child(8) {
     bottom: auto;
     right: auto;
-    top: 34vh;
-    left: 10vw;
+    top: 187px;
+    left: 12px;
     max-width: 85px;
   }
   .we-know__list-item:nth-child(9) {
-    bottom: 20vh;
-    left: 14vw;
+    bottom: 110px;
+    left: 70px;
     max-width: 85px;
   }
   .we-know__list-item:nth-child(10) {
-    bottom: 9vh;
-    left: 21vw;
+    bottom: 46px;
+    left: 70px;
     max-width: 155px;
   }
   .we-know__list-item:nth-child(11) {
-    bottom: 1vh;
-    left: 20vw;
+    bottom: 0px;
+    left: 29px;
     max-width: 168px;
   }
   .we-know__list-item:nth-child(12) {
     left: auto;
-    bottom: 0vh;
-    right: 20vw;
+    bottom: 1px;
+    right: 65px;
     max-width: 80px;
   }
   .we-know__list-item:nth-child(13) {
-    top: 12vh;
+    top: 72px;
     max-width: 124px;
-    left: 23vw;
+    left: 20px;
   }
   .we-know__list-item:nth-child(14) {
-    top: 0vh;
-    left: 10vw;
+    top: 0px;
+    left: 31px;
     max-width: 110px;
   }
 }
@@ -1486,6 +1451,14 @@ body {
   -webkit-transform: translate(-51%, 0);
   -ms-transform: translate(-51%, 0);
   transform: translate(-51%, 0);
+}
+.now-imagine__bg-blob--on {
+  opacity: 0;
+}
+.now-imagine__bg-blob--off {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .now-imagine__wrapper {
   position: absolute;
@@ -1781,7 +1754,7 @@ body {
   transform: translate(-50%, -100%);
   width: 80vw;
   height: clamp(192px, 28vw, 480px);
-  background-image: url("../assets/img/rope.svg");
+  background-image: url("../assets/img/rope2.svg");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1945,7 +1918,7 @@ body {
 .you-need-facts__subtitle {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: clamp(0.9375rem, 1.25vw, 1.5rem);
+  font-size: clamp(0.9375rem, 2vw, 1.5rem);
   text-align: center;
   color: #837d8a;
 }
@@ -2043,7 +2016,7 @@ body {
 }
 @media (max-width: 1120px) {
   .you-need-facts__text {
-    font-size: clamp(1rem, 1.6667vw, 2rem);
+    font-size: clamp(1rem, 2vw, 2rem);
   }
   .you-need-facts__title {
     width: clamp(122px, 20.4583vw, 220px);
@@ -2866,7 +2839,7 @@ body {
 }
 .projects__wrapper {
   height: 100vh;
-  background-image: url("../assets/img/mask-new.png");
+  background-image: url("../assets/img/mask2.svg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -3316,11 +3289,8 @@ body {
   transform: scale(1.1);
 }
 @media (max-width: 1400px) {
-  .result-item__title {
-    font-size: 20px;
-  }
-  .result-item__days {
-    font-size: 15px;
+  .result-item__text {
+    font-size: 21px;
   }
   .result-item__img--mobil {
     display: block;
@@ -3349,6 +3319,9 @@ body {
     height: 142px;
     position: relative;
     left: -78px;
+  }
+  .result-item__text {
+    font-size: 16px;
   }
 }
 
@@ -3839,6 +3812,9 @@ body {
   .while-thinking {
     margin-bottom: 145px;
   }
+  .while-thinking__box {
+    background: none;
+  }
   .while-thinking__text {
     margin-bottom: 31px;
     font-weight: 400;
@@ -4143,6 +4119,15 @@ body {
   .fixed-price-item--dop {
     display: none;
   }
+  .fixed-price-item__description {
+    font-size: 24px;
+  }
+  .fixed-price-item__list {
+    font-size: 18px;
+  }
+  .fixed-price-item__badge p {
+    font-size: 18px;
+  }
 }
 @media (max-width: 700px) {
   .fixed-price-item__header {
@@ -4150,6 +4135,15 @@ body {
   }
   .fixed-price-item__tag {
     font-size: 15px;
+  }
+  .fixed-price-item__description {
+    font-size: 16px;
+  }
+  .fixed-price-item__list {
+    font-size: 16px;
+  }
+  .fixed-price-item__badge p {
+    font-size: 13px;
   }
   .fixed-price-item__price {
     font-size: clamp(20px, 4vw, 30px);
