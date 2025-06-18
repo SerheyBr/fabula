@@ -306,22 +306,35 @@ document.addEventListener('DOMContentLoaded', (event) => {
       })
    }
 
-   ScrollTrigger.create({
-      trigger: '.result', // замени на нужный тебе селектор
-      start: 'top 70%', // когда верх секции достигнет 70% окна
-      once: true, // запустится один раз
-      // markers: true,
-      // delay: 1,
-      onEnter: () => {
-         activeitItemFromResultList()
-      },
-   })
-
-   resultList.forEach((el, index) => {
-      el.addEventListener('click', (e) => {
-         activeitItemFromResultList(index)
+   if (window.innerWidth > 485) {
+      ScrollTrigger.create({
+         trigger: '.result', // замени на нужный тебе селектор
+         start: 'top 70%', // когда верх секции достигнет 70% окна
+         once: true, // запустится один раз
+         // markers: true,
+         // delay: 1,
+         onEnter: () => {
+            activeitItemFromResultList()
+         },
       })
-   })
+
+      resultList.forEach((el, index) => {
+         el.addEventListener('click', (e) => {
+            activeitItemFromResultList(index)
+         })
+      })
+   } else {
+      resultList[0].classList.add('active')
+
+      resultList.forEach((el) => {
+         el.addEventListener('click', (e) => {
+            resultList.forEach((el) => {
+               el.classList.remove('active')
+            })
+            e.currentTarget.classList.toggle('active')
+         })
+      })
+   }
 
    //анимация мушек
    function moveRandomly(spot) {

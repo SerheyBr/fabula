@@ -242,6 +242,18 @@
          font-size: 16px;
       }
    }
+   @media (max-width: 480px) {
+      &__info {
+         max-width: 100%;
+      }
+      &__circle {
+         display: none;
+      }
+      &__img--mobil {
+         left: 0;
+         width: 100%;
+      }
+   }
 }
 
 @keyframes circle {

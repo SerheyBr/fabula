@@ -3324,6 +3324,18 @@ body {
     font-size: 16px;
   }
 }
+@media (max-width: 480px) {
+  .result-item__info {
+    max-width: 100%;
+  }
+  .result-item__circle {
+    display: none;
+  }
+  .result-item__img--mobil {
+    left: 0;
+    width: 100%;
+  }
+}
 
 @-webkit-keyframes circle {
   from {
