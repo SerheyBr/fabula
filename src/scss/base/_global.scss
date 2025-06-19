@@ -28,3 +28,7 @@ body {
 .bg-white {
    background: linear-gradient(180deg, #fbf5ff 0%, #fbf5ff 100%);
 }
+
+html {
+   scroll-behavior: smooth;
+}
