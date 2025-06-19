@@ -1,5 +1,7 @@
 .result {
    margin-bottom: 280px;
+   position: relative;
+   z-index: 1;
    &__wrapper {
       display: flex;
       justify-content: space-between;

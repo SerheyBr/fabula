@@ -2833,26 +2833,31 @@ body {
 }
 
 .projects {
-  position: relative;
-  padding-top: 300px;
-  margin-bottom: 340px;
+  margin-bottom: 150px;
+  margin-top: 300px;
 }
 .projects__wrapper {
-  height: 100vh;
-  background-image: url("../assets/img/mask2.svg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-bottom: 300px;
 }
-.projects__title {
+.projects__title--wrapper {
   position: relative;
   z-index: 1;
-  isolation: isolate;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.projects__title {
   -webkit-backdrop-filter: blur(60.5999984741px);
   backdrop-filter: blur(60.5999984741px);
   background: rgba(255, 255, 255, 0.1);
@@ -2866,7 +2871,6 @@ body {
   line-height: 110%;
   text-align: center;
   color: var(--white);
-  margin-bottom: 114px;
 }
 .projects__title span {
   background: linear-gradient(102deg, #9643f5 0%, #b16ffc 45.52%, #7c2dd6 100%);
@@ -2874,24 +2878,13 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.projects__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
 @media (max-width: 1024px) {
   .projects {
-    padding-top: 500px;
-    margin-bottom: 150px;
+    margin-top: 290px;
   }
 }
 @media (max-width: 800px) {
   .projects {
-    padding-top: 400px;
     margin-bottom: 100px;
   }
   .projects__title {
@@ -2904,11 +2897,15 @@ body {
 }
 @media (max-width: 500px) {
   .projects {
-    padding-top: 300px;
+    margin-top: 300px;
   }
 }
 @media (max-width: 480px) {
+  .projects__title--wrapper {
+    height: auto;
+  }
   .projects__wrapper {
+    padding-bottom: 0;
     overflow: visible;
     height: auto;
     background-image: none;
@@ -2922,11 +2919,6 @@ body {
 }
 
 .projects-item {
-  position: absolute;
-  top: 0;
-  -webkit-transform: translateY(100vh);
-  -ms-transform: translateY(100vh);
-  transform: translateY(100vh);
   max-width: 616px;
   height: 390px;
   width: 100%;
@@ -3002,6 +2994,22 @@ body {
   color: #c6f806;
   border: 1px solid #c6f806;
 }
+.projects-item--text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.projects-item--text p {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 120%;
+}
 @media (max-width: 800px) {
   .projects-item__title {
     font-size: clamp(1.25rem, 3.6667vw, 2rem);
@@ -3030,7 +3038,12 @@ body {
   height: 100%;
   bottom: 0;
   left: 0;
+  overflow: hidden;
   z-index: -1;
+  background-image: url("../assets/img/mask2.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .projects-bg__el {
   max-width: -webkit-max-content;
@@ -3074,6 +3087,8 @@ body {
 
 .result {
   margin-bottom: 280px;
+  position: relative;
+  z-index: 1;
 }
 .result__wrapper {
   display: -webkit-box;

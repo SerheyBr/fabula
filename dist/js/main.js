@@ -446,29 +446,42 @@ document.addEventListener('DOMContentLoaded', (event) => {
    })
 
    //анимация projects-item
+   const sectionProjects = document.querySelector('.projects__wrapper')
+   const projectItems = document.querySelectorAll('.projects-item')
    if (window.innerWidth > 485) {
-      console.log(window.innerWidth)
-      const sectionProjects = document.querySelector('.projects__wrapper')
-      const skrollDistansProjects = 6000
-      const projectItems = document.querySelectorAll('.projects-item')
-      document.querySelector('.result').style.marginTop =
-         skrollDistansProjects + 'px'
-
-      const tlProjects = gsap.timeline({
-         scrollTrigger: {
-            trigger: sectionProjects,
-            start: 'top top',
-            end: `+=${skrollDistansProjects}`,
-            pin: true,
-            scrub: 1,
-            pinSpacing: false,
-            // markers: true,
-         },
+      let st = ScrollTrigger.create({
+         trigger: '.projects__wrapper',
+         pin: '.projects__title--wrapper',
+         start: 'top top',
+         end: `95% center`,
+         scrub: 1,
+         // markers: true,
       })
-      projectItems.forEach((el, index, arr) => {
-         // tlProjects.to(el, { y: '-100vh' }, '-=0.41')
-         tlProjects.to(el, { y: '-100%' }, '-=0.3')
-         // tlProjects.to(el, { y: '-100%' })
+
+      projectItems.forEach((el) => {
+         gsap.from(el, {
+            y: '300px',
+            duration: 1,
+            scrollTrigger: {
+               trigger: el,
+               start: 'top bottom',
+               // markers: true,
+               scrub: 1,
+            },
+         })
+      })
+   } else {
+      projectItems.forEach((el) => {
+         gsap.from(el, {
+            opacity: 0,
+            // duration: 1,
+            scrollTrigger: {
+               trigger: el,
+               start: 'top bottom',
+               end: 'bottom center',
+               scrub: 1,
+            },
+         })
       })
    }
 
@@ -497,10 +510,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
    })
 
    //анимация секции we offer
+   const lottieElements = document.querySelectorAll('.offer-item__img')
    if (window.innerWidth > 485) {
       const sectionOffer = document.querySelector('.offer')
       const offerElementsInfo = document.querySelectorAll('.offer-item__info')
-      const lottieElements = document.querySelectorAll('.offer-item__img')
+
       const scrollDistanceOffer = 3000
       const nextSection = document.querySelector('.we-fabula')
       nextSection.style.marginTop = `${scrollDistanceOffer}px`
@@ -529,6 +543,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
          .to({}, { duration: 1 })
          .to(lottieElements[2], { opacity: 0 })
          .to(offerElementsInfo[2], { y: '-30vh', opacity: 0.1 })
+   } else {
+      lottieElements.forEach((el) => {
+         gsap.from(el, {
+            opacity: 0,
+            // duration: 1.2,
+            scrollTrigger: {
+               trigger: el,
+               start: 'top bottom',
+               end: 'bottom center',
+               scrub: 1,
+            },
+         })
+      })
    }
 
    //footer анимация
