@@ -41,6 +41,52 @@ const contactUsBtnScrollZone = document.querySelector('.btn-scroll')
 const contactUsBtnHeight = contactUsBtn.clientHeight
 contactUsBtnScrollZone.style.paddingBottom = `${contactUsBtnHeight + 20}px`
 
+// открытие / закрытие popup
+const popup = document.querySelector('.popup')
+const select = new SlimSelect({
+   select: '#popup-select',
+   settings: {
+      showSearch: false,
+      hideSelected: false,
+      placeholderText: 'choose a package',
+   },
+})
+
+const togglePopup = (nameOption) => {
+   if (popup.classList.contains('active')) {
+      popup.classList.remove('active')
+      document.body.style.overflow = 'visible'
+      document.body.style.overflowX = 'hidden'
+   } else {
+      nameOption ? select.setSelected(nameOption) : select.setSelected(null)
+      popup.classList.add('active')
+      document.body.style.overflow = 'hidden'
+   }
+}
+
+// document
+//    .querySelector('.hero-contact-us__btn')
+//    .addEventListener('click', togglePopup)
+
+// document
+//    .querySelector('.popup__close-btn')
+//    .addEventListener('click', togglePopup)
+
+document
+   .querySelector('.hero-contact-us__btn')
+   .addEventListener('click', () => togglePopup())
+
+document
+   .querySelector('.popup__close-btn')
+   .addEventListener('click', () => togglePopup())
+
+document.querySelectorAll('.fixed-price-item__btn').forEach((el) => {
+   // console.log(el.dataset.plan)
+   el.addEventListener('click', () => {
+      togglePopup(el.dataset.plan)
+   })
+})
+
 document.addEventListener('DOMContentLoaded', (event) => {
    //анимация курсора на hero
    // const cursorTl = gsap.timeline({})

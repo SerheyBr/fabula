@@ -1,0 +1,61 @@
+<div class="popup">
+   <div class="popup__wrapper">
+      <buttom class="popup__close-btn">
+         <svg
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+         >
+            <path
+               d="M27 1L1 27"
+               stroke="white"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+            />
+            <path
+               d="M1 1L27 27"
+               stroke="white"
+               stroke-width="2"
+               stroke-linecap="round"
+               stroke-linejoin="round"
+            />
+         </svg>
+      </buttom>
+      <p class="popup__title">
+         Leave a request and get a free competitor analysis
+      </p>
+      <p class="popup__subtitle">
+         Our manager will contact you for a more substantive dialogue to offer
+         you a commercial offer
+      </p>
+      <form class="popup__form">
+         <div class="popup__form-header">
+            <select name="package-name" id="popup-select" class="popup__select">
+               <option data-placeholder="true"></option>
+               <option value="Basic">Basic Package</option>
+               <option value="Premium">Premium Package</option>
+               <option value="VIP">VIP Package</option>
+               <option value="Help">Help me choose</option>
+            </select>
+         </div>
+         <div class="popup__form-footer">
+            <div class="popup__input">
+               <label for="popup-name"></label>
+               <input type="text" id="popup-name" placeholder="Your Name" />
+            </div>
+            <div class="popup__input">
+               <label for="popup-number"></label>
+               <input
+                  type="text"
+                  id="popup-number"
+                  placeholder="Phone number"
+               />
+            </div>
+            <button class="popup__btn button-green">Call me back</button>
+         </div>
+      </form>
+   </div>
+</div>

@@ -1,0 +1,259 @@
+.popup {
+   padding: 30px;
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 40;
+   background-color: rgba(22, 4, 42, 0.9);
+   display: none;
+   &__wrapper {
+      position: relative;
+      padding: 90px;
+      border-radius: 30px;
+      border: 1px solid #fff;
+      background-image: url('../assets/img/bg-leave-request.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+   &__close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+   }
+   &__title {
+      color: #fff;
+      text-align: center;
+      font-family: var(--font3-2);
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 124%;
+      max-width: 850px;
+      text-align: center;
+      margin-bottom: 20px;
+   }
+
+   &__subtitle {
+      color: #fff;
+      text-align: center;
+      font-family: var(--font-family);
+      font-size: 20px;
+      line-height: 140%;
+      max-width: 560px;
+      text-align: center;
+      margin-bottom: 37px;
+   }
+
+   &__form {
+      width: 900px;
+   }
+   &__form-header {
+      width: 100%;
+      margin-bottom: 30px;
+   }
+   &__form-footer {
+      display: flex;
+      width: 100%;
+      gap: 30px;
+   }
+   &__select {
+      padding: 30px;
+      color: #fff;
+      font-family: var(--font-family);
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      width: 100%;
+      border-radius: 76px;
+      border: 1px solid #d9d9d9;
+      background-color: inherit;
+   }
+   &__input {
+      input {
+         width: calc(100% / 3);
+         padding: 30px;
+         color: #fff;
+         font-family: var(--font-family);
+         font-size: 24px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 120%;
+         width: 100%;
+         border-radius: 76px;
+         border: 1px solid #d9d9d9;
+         background-color: inherit;
+      }
+   }
+
+   &__btn {
+      width: calc(100% / 3);
+      padding: 30px;
+      font-family: var(--font-family);
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+   }
+}
+
+.popup.active {
+   display: flex;
+}
+
+.ss-main.ss-open-below {
+   border-radius: 76px;
+}
+.ss-content {
+   transition: all 0.3s;
+   transform: translateY(10px) scaleY(0);
+   opacity: 0;
+}
+.ss-content.ss-open-below {
+   border-radius: 30px;
+   transform: translateY(10px) scaleY(1);
+   background-color: rgba(85, 51, 121, 1);
+}
+
+.ss-content .ss-list .ss-option {
+   color: #fff;
+   padding: 14px;
+}
+
+.ss-content .ss-list .ss-option:last-child {
+   border-top: 1px solid #fff;
+   padding: 5px 10px 10px 10px;
+}
+
+.ss-content .ss-list .ss-option:hover {
+   background-color: rgba(255, 255, 255, 0.15);
+}
+
+.ss-content .ss-list .ss-option.ss-highlighted,
+.ss-content .ss-list .ss-option:not(.ss-disabled).ss-selected {
+   background-color: inherit;
+   color: rgba(198, 248, 6, 1);
+}
+
+.ss-main .ss-arrow {
+   width: 30px;
+   height: 30px;
+   path {
+      stroke: white;
+   }
+}
+
+@media (max-width: 1600px) {
+   .popup {
+      &__wrapper {
+         padding: 30px;
+      }
+      &__title {
+         font-size: 42px;
+      }
+      &__subtitle {
+         max-width: 100%;
+      }
+      &__select {
+         padding: 15px;
+      }
+      &__input {
+         input {
+            padding: 15px;
+         }
+      }
+      &__btn {
+         padding: 15px;
+      }
+   }
+   .ss-content .ss-list .ss-option {
+      font-size: 20px;
+      padding: 6px 10px;
+   }
+}
+
+@media (max-width: 1024px) {
+   .popup {
+      &__wrapper {
+         max-width: 70%;
+      }
+      &__form {
+         width: auto;
+      }
+      &__form-footer {
+         gap: 15px;
+      }
+      &__title {
+         font-size: 32px;
+         max-width: 400px;
+      }
+      &__subtitle {
+         font-size: 16px;
+      }
+      &__select {
+         font-size: 16px;
+      }
+      &__input {
+         input {
+            font-size: 16px;
+         }
+      }
+
+      &__btn {
+         font-size: 16px;
+      }
+   }
+   .ss-content .ss-list .ss-option {
+      font-size: 16px;
+      padding: 6px 10px;
+   }
+}
+
+@media (max-width: 820px) {
+   .popup {
+      &__wrapper {
+         max-width: 100%;
+      }
+      &__form {
+         width: 100%;
+      }
+      &__form-footer {
+         flex-direction: column;
+         width: 100%;
+      }
+      &__title {
+         font-size: 24px;
+         max-width: 280px;
+      }
+      &__subtitle {
+         max-width: 280px;
+      }
+      &__close-btn {
+         width: 20px;
+         height: 20px;
+         top: 15px;
+         right: 15px;
+      }
+      &__btn {
+         width: 100%;
+      }
+   }
+
+   .ss-main .ss-arrow {
+      width: 15px;
+      height: 15px;
+   }
+}
