@@ -410,7 +410,7 @@
             bottom: auto;
             right: auto;
             top: 187px;
-            left: 12px;
+            left: 32px;
             max-width: 85px;
          }
          &:nth-child(9) {
@@ -430,12 +430,14 @@
             max-width: 168px;
          }
          &:nth-child(12) {
-            left: auto;
-            bottom: 1px;
-            right: 65px;
-            max-width: 80px;
+            // left: auto;
+            // bottom: 1px;
+            // right: 65px;
+            // max-width: 80px;
+            display: none;
          }
          &:nth-child(13) {
+            filter: blur(3px);
             top: 72px;
             max-width: 124px;
             left: 20px;

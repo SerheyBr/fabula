@@ -17,7 +17,7 @@
    }
    &__wrapper {
       position: relative;
-      max-width: 1005px;
+      max-width: 960px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -28,21 +28,24 @@
    &__title {
       font-family: var(--second-family);
       font-weight: 600;
-      font-size: clamp(20px, 64px, 64px);
+      // font-size: clamp(20px, 64px, 64px);
+      font-size: 4rem;
       line-height: 135%;
       text-align: center;
       color: var(--white);
       margin-bottom: 35px;
+      max-width: 840px;
    }
 
    &__subtitle {
-      font-family: var(--font-family);
+      font-family: var(--second-family);
       font-weight: 400;
-      font-size: 40px;
+      font-size: 2rem;
       line-height: 140%;
       text-align: center;
-      color: var(--white);
-      margin-bottom: 64px;
+      color: #c8bad4;
+      margin-bottom: 86px;
+      max-width: 840px;
    }
 
    &__form {
@@ -61,9 +64,15 @@
       padding: 30px;
       input {
          color: var(--pink);
-         font-family: var(--font-family);
+         font-family: var(--font3-1);
          font-weight: 400;
          font-size: 24px;
+         max-width: 100%;
+         line-height: 120%;
+         &::placeholder {
+            line-height: 120%;
+            font-family: var(--font3-1);
+         }
       }
       input::placeholder {
          font-family: var(--font-family);
@@ -116,10 +125,10 @@
          display: block;
       }
       &__title {
-         font-size: clamp(20px, 4vw, 64px);
+         font-size: 3rem;
       }
       &__subtitle {
-         font-size: clamp(16px, 2vw, 40px);
+         font-size: 2rem;
       }
    }
    @media (max-width: 770px) {
@@ -136,7 +145,7 @@
          background-image: url('../assets/img/bg-leave-request-mobil.png');
       }
       &__subtitle {
-         display: none;
+         margin-bottom: 40px;
       }
       &__btn {
          padding: 15px 0;
@@ -152,19 +161,39 @@
          margin-bottom: 20px;
       }
    }
+   @media (max-width: 600px) {
+      &__title {
+         font-size: 2rem;
+      }
+      &__subtitle {
+         font-size: 1.5rem;
+      }
+   }
    @media (max-width: 480px) {
+      &__box {
+         padding: 50px 20px 30px 20px;
+      }
+      &__title {
+         font-size: 20px;
+         margin-bottom: 10px;
+      }
+      &__subtitle {
+         font-size: 1rem;
+         margin-bottom: 20px;
+      }
       &__btn {
          font-size: 16px;
          line-height: 130%;
       }
       &__input {
+         line-height: 0%;
          input {
             font-size: 16px;
-            line-height: 130%;
+            line-height: 120%;
          }
          input::placeholder {
             font-size: 16px;
-            line-height: 130%;
+            line-height: 120%;
          }
       }
    }
