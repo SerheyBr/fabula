@@ -83,6 +83,7 @@
       background-color: inherit;
    }
    &__input {
+      position: relative;
       input {
          width: calc(100% / 3);
          padding: 30px;
@@ -256,4 +257,13 @@
       width: 15px;
       height: 15px;
    }
+}
+
+.just-validate-error-label {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   transform: translateY(110%);
+   color: rgb(204 17 17);
+   font-size: 20px;
 }

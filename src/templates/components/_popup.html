@@ -31,7 +31,7 @@
          Our manager will contact you for a more substantive dialogue to offer
          you a commercial offer
       </p>
-      <form class="popup__form">
+      <form class="popup__form" id="popup__form" method="post">
          <div class="popup__form-header">
             <select name="package-name" id="popup-select" class="popup__select">
                <option data-placeholder="true"></option>
@@ -44,17 +44,25 @@
          <div class="popup__form-footer">
             <div class="popup__input">
                <label for="popup-name"></label>
-               <input type="text" id="popup-name" placeholder="Your Name" />
+               <input
+                  type="text"
+                  name="name"
+                  id="popup-name"
+                  placeholder="Your Name"
+               />
             </div>
             <div class="popup__input">
                <label for="popup-number"></label>
                <input
-                  type="text"
+                  type="tel"
+                  name="number"
                   id="popup-number"
                   placeholder="Phone number"
                />
             </div>
-            <button class="popup__btn button-green">Call me back</button>
+            <button class="popup__btn button-green" type="submit">
+               Call me back
+            </button>
          </div>
       </form>
    </div>

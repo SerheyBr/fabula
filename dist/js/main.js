@@ -64,14 +64,6 @@ const togglePopup = (nameOption) => {
    }
 }
 
-// document
-//    .querySelector('.hero-contact-us__btn')
-//    .addEventListener('click', togglePopup)
-
-// document
-//    .querySelector('.popup__close-btn')
-//    .addEventListener('click', togglePopup)
-
 document
    .querySelector('.hero-contact-us__btn')
    .addEventListener('click', () => togglePopup())
@@ -86,6 +78,27 @@ document.querySelectorAll('.fixed-price-item__btn').forEach((el) => {
       togglePopup(el.dataset.plan)
    })
 })
+
+// валидация форм
+const validate = new window.JustValidate('#popup__form')
+
+validate.addField('#popup-name', [
+   {
+      rule: 'required',
+      errorMessage: 'введите свое имя',
+   },
+])
+
+// маска для телефона и имени
+Inputmask({ mask: '+375 (99) 999-99-99', showMaskOnHover: false }).mask(
+   '#popup-number',
+)
+
+Inputmask({
+   regex: '[а-яА-ЯёЁa-zA-Z\\s]+',
+   placeholder: '',
+   showMaskOnHover: false,
+}).mask('#popup-name')
 
 document.addEventListener('DOMContentLoaded', (event) => {
    //анимация курсора на hero
