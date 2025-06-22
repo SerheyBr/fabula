@@ -82,12 +82,18 @@ document.querySelectorAll('.fixed-price-item__btn').forEach((el) => {
 // валидация форм
 const validate = new window.JustValidate('#popup__form')
 
-validate.addField('#popup-name', [
-   {
-      rule: 'required',
-      errorMessage: 'введите свое имя',
-   },
-])
+validate
+   .addField('#popup-name', [
+      {
+         rule: 'required',
+         errorMessage: 'введите свое имя',
+      },
+   ])
+   .onSuccess((event) => {
+      // Важно! Разрешаем отправку формы
+      const form = document.getElementById('popup__form')
+      form.submit()
+   })
 
 // маска для телефона и имени
 Inputmask({ mask: '+375 (99) 999-99-99', showMaskOnHover: false }).mask(
