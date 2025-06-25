@@ -73,35 +73,7 @@ document
    .addEventListener('click', () => togglePopup())
 
 document.querySelectorAll('.fixed-price-item__btn').forEach((el) => {
-   // console.log(el.dataset.plan)
    el.addEventListener('click', () => {
       togglePopup(el.dataset.plan)
    })
 })
-
-// валидация форм
-const validate = new window.JustValidate('#popup__form')
-
-validate
-   .addField('#popup-name', [
-      {
-         rule: 'required',
-         errorMessage: 'введите свое имя',
-      },
-   ])
-   .onSuccess((event) => {
-      // Важно! Разрешаем отправку формы
-      const form = document.getElementById('popup__form')
-      form.submit()
-   })
-
-// маска для телефона и имени
-Inputmask({ mask: '+375 (99) 999-99-99', showMaskOnHover: false }).mask(
-   '#popup-number',
-)
-
-Inputmask({
-   regex: '[а-яА-ЯёЁa-zA-Z\\s]+',
-   placeholder: '',
-   showMaskOnHover: false,
-}).mask('#popup-name')

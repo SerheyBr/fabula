@@ -12,6 +12,8 @@
 @use 'components/footer';
 @use 'components/hero-contact-us-btn';
 @use 'components/popup';
+@use 'components/laoding';
+@use 'components/window-message';
 
 //секции
 @use 'sections/hero';

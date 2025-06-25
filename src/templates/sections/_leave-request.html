@@ -534,37 +534,39 @@
                Our manager will contact you for a more substantive dialogue to
                offer you a commercial offer
             </div>
-            <form class="leave-request__form">
+            <form class="leave-request__form" id="leave-request__form">
                <div class="leave-request__form-item">
                   <div class="leave-request__input">
                      <label
-                        for="form-name"
+                        for="section-form-name"
                         class="leave-request__label"
                      ></label>
                      <input
+                        name="name"
                         type="text"
                         placeholder="Your Name"
-                        id="form-name"
+                        id="section-form-name"
                      />
                   </div>
                </div>
                <div class="leave-request__form-item">
                   <div class="leave-request__input">
                      <label
-                        for="form-phone"
+                        for="section-form-phone"
                         class="leave-request__label"
                      ></label>
                      <input
+                        name="number"
                         type="text"
                         placeholder="Phone number"
-                        id="form-phone"
+                        id="section-form-phone"
                      />
                   </div>
                </div>
                <div class="leave-request__form-item">
-                  <buttn class="leave-request__btn button-green"
-                     >Call me back</buttn
-                  >
+                  <button class="leave-request__btn button-green" type="submit">
+                     Call me back
+                  </button>
                </div>
             </form>
          </div>

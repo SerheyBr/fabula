@@ -806,6 +806,105 @@ html {
   font-size: 20px;
 }
 
+.laoding {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  display: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.laoding img {
+  width: 5%;
+}
+
+.laoding.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 400px) {
+  .laoding img {
+    width: 15%;
+  }
+}
+.window-message {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 50;
+  padding: 10px;
+}
+
+.error-message {
+  position: relative;
+  z-index: 50;
+  padding: 7px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: rgba(255, 0, 0, 0.703);
+  -webkit-animation: slideDown 0.3s ease-out;
+  animation: slideDown 0.3s ease-out;
+}
+
+.sucsses-message {
+  position: relative;
+  z-index: 50;
+  padding: 7px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: rgba(60, 255, 0, 0.703);
+  -webkit-animation: slideDown 0.3s ease-out;
+  animation: slideDown 0.3s ease-out;
+}
+
+@-webkit-keyframes slideDown {
+  from {
+    top: 50px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    top: 50px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@media (max-width: 400px) {
+  .window-message {
+    padding: 0;
+  }
+  .error-message {
+    padding: 0 10px 0 10px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    background-color: inherit;
+    color: rgba(255, 0, 0, 0.703);
+  }
+  .sucsses-message {
+    padding: 0 10px 0 10px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    background-color: inherit;
+    color: rgba(60, 255, 0, 0.703);
+  }
+}
 .hero {
   height: calc(100vh - var(--header-height));
   position: relative;
