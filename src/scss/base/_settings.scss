@@ -47,6 +47,9 @@ textarea {
    padding: 0;
    outline: none;
 }
+input:-internal-autofill-selected {
+   background-color: rgb(213, 1, 1) !important;
+}
 
 button {
    cursor: pointer;

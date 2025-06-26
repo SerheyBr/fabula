@@ -71,6 +71,10 @@ textarea {
   outline: none;
 }
 
+input:-internal-autofill-selected {
+  background-color: rgb(213, 1, 1) !important;
+}
+
 button {
   cursor: pointer;
   -webkit-transition: all 0.3s;
@@ -4999,6 +5003,7 @@ html {
   color: #777;
 }
 .leave-request__btn {
+  white-space: nowrap;
   padding: 30px 77px;
 }
 .leave-request__social {

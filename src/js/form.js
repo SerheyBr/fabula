@@ -15,8 +15,7 @@ const closePopup = () => {
 
 const showMessage = (status, message) => {
    const boxMessage = document.querySelector('.window-message')
-
-   let element = document.createElement('p')
+   const element = document.createElement('p')
 
    if (status === 'error') {
       element.classList.add('error-message')
@@ -25,7 +24,13 @@ const showMessage = (status, message) => {
    }
 
    element.innerHTML = message
+   const array = [...boxMessage.children].map((el) => el.innerHTML)
+
+   if (array.includes(element.innerHTML)) {
+      return
+   }
    boxMessage.append(element)
+
    setTimeout(() => {
       element.remove()
    }, 5000)
@@ -34,12 +39,20 @@ const showMessage = (status, message) => {
 Inputmask({ mask: '+375 (99) 999-99-99', showMaskOnHover: false }).mask(
    '#popup-number',
 )
+Inputmask({ mask: '+375 (99) 999-99-99', showMaskOnHover: false }).mask(
+   '#section-form-phone',
+)
 
 Inputmask({
    regex: '[а-яА-ЯёЁa-zA-Z\\s]+',
    placeholder: '',
    showMaskOnHover: false,
 }).mask('#popup-name')
+Inputmask({
+   regex: '[а-яА-ЯёЁa-zA-Z\\s]+',
+   placeholder: '',
+   showMaskOnHover: false,
+}).mask('#section-form-name')
 
 // функция отправки
 const fetchFn = (form) => {
